@@ -20,4 +20,9 @@ class PageController extends Controller
     {
         return view('service');
     }
+
+    public function project()
+    {
+        return view('project');
+    }
 }
