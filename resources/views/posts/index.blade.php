@@ -1,10 +1,10 @@
 <x-layouts.main>
     <x-slot:title>
-        About
+        Posts
     </x-slot:title>
 
     <x-page-hdr>
-        About
+        Posts
     </x-page-hdr>
 
     
