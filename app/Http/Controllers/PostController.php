@@ -11,33 +11,39 @@ class PostController extends Controller
         return view('posts.index');
     }
 
-    public function show()
-    {
-
-    }
-
+    
     public function create()
     {
-
+        
     }
 
-    public function store()
+    
+    public function store(Request $request)
     {
         
     }
 
-    public function edit()
-    {
-
-    }
-
-    public function update()
+    
+    public function show(string $id)
     {
         
     }
 
-    public function delete()
+    
+    public function edit(string $id)
     {
+        
+    }
 
+    
+    public function update(Request $request, string $id)
+    {
+        
+    }
+
+    
+    public function destroy(string $id)
+    {
+        
     }
 }
