@@ -31,3 +31,5 @@ class PageController extends Controller
         return view('contact');
     }
 }
+
+?>

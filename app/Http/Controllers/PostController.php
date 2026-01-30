@@ -47,3 +47,5 @@ class PostController extends Controller
         
     }
 }
+
+?>
