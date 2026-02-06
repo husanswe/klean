@@ -9,11 +9,28 @@ class PostController extends Controller
 {
     public function index()
     {
-        $post = Post::where('title', 'title')->first();
-        
-        dd($post);
+        /* $newPost = new Post;
+        $newPost->title = 'new post 4';
+        $newPost->short_content = ' new post short content';
+        $newPost->content = ' new post content';
+        $newPost->photo = '/storage/new_image.png';
 
-        return view('posts.index');
+        $newPost->save(); */
+
+        /* $newPost = Post::create([
+            'title' => '5',
+            'short_content' => 'abcdefghi',
+            'content' => 'content 123',
+            'photo' => 'photo.png',
+            'phone' => '998856458'
+        ]); */
+
+        $post = Post::find(7)->update(['title' => "123 Changed title"]);
+        
+
+        return 'success';
+
+        // return view('posts.index');
     }
 
     
