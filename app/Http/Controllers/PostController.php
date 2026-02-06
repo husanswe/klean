@@ -25,10 +25,22 @@ class PostController extends Controller
             'phone' => '998856458'
         ]); */
 
-        $post = Post::find(7)->update(['title' => "123 Changed title"]);
+        // $post = Post::find(7)->update(['title' => "123 Changed title"]);
         
+        /* $post = Post::where('id', 2)->first();
 
-        return 'success';
+        $post->delete(); */
+
+        // Post::destroy(3);
+
+        // Post::destroy(5);
+
+        $post = Post::find(1);
+
+        $post = Post::all();
+        dd($post);
+
+        return 'deleted';
 
         // return view('posts.index');
     }
