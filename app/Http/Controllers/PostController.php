@@ -4,43 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
     public function index()
     {
-        /* $newPost = new Post;
-        $newPost->title = 'new post 4';
-        $newPost->short_content = ' new post short content';
-        $newPost->content = ' new post content';
-        $newPost->photo = '/storage/new_image.png';
+        $posts = DB::table('posts')->count();
+        dd($posts);
 
-        $newPost->save(); */
-
-        /* $newPost = Post::create([
-            'title' => '5',
-            'short_content' => 'abcdefghi',
-            'content' => 'content 123',
-            'photo' => 'photo.png',
-            'phone' => '998856458'
-        ]); */
-
-        // $post = Post::find(7)->update(['title' => "123 Changed title"]);
-        
-        /* $post = Post::where('id', 2)->first();
-
-        $post->delete(); */
-
-        // Post::destroy(3);
-
-        // Post::destroy(5);
-
-        $post = Post::find(1);
-
-        $post = Post::all();
-        dd($post);
-
-        return 'deleted';
+        return 'success';
 
         // return view('posts.index');
     }
