@@ -19,9 +19,9 @@
                             <span class="text-primary px-2">|</span>
                             <a class="text-secondary text-uppercase font-weight-medium" href="">Cleaning</a>
                             <span class="text-primary px-2">|</span>
-                            <a class="text-secondary text-uppercase font-weight-medium" href="">January 01, 2045</a>
+                            <a class="text-secondary text-uppercase font-weight-medium" href="">{{$post->created_at}}</a>
                         </div>
-                        <h1 class="section-title mb-3">Amet sit kasd ipsum lorem clita ipsum duo clita</h1>
+                        <h1 class="section-title mb-3">{{$post->title}}</h1>
                     </div>
 
                     <div class="mb-5">
