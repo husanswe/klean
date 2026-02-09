@@ -10,15 +10,9 @@ class PostController extends Controller
 {
     public function index()
     {   
-        /* Post::create([
-            'title'         => 'My First Real Post',
-            'short_content' => 'Short description here',
-            'content'       => 'Full long content...',
-            'photo'         => 'photos/example.jpg',
-        ]); */
+        $posts = Post::all();
 
-
-        return view('posts.index');
+        return view('posts.index')->with('posts', $posts);
     }
 
     
