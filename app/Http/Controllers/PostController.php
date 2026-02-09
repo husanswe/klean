@@ -9,8 +9,16 @@ use Illuminate\Support\Facades\DB;
 class PostController extends Controller
 {
     public function index()
-    {
-        $posts = DB::table('posts')->count();
+    {   
+        Post::create([
+            'title'         => 'My First Real Post',
+            'short_content' => 'Short description here',
+            'content'       => 'Full long content...',
+            'photo'         => 'photos/example.jpg',
+        ]);
+
+        $posts = Post::whereMonth('updated_at', '02')->get();
+        
         dd($posts);
 
         return 'success';
