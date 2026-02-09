@@ -36,8 +36,8 @@
                             <span class="text-primary px-2">|</span>
                             <a class="text-secondary text-uppercase font-weight-medium" href="">Cleaning</a>
                         </div>
-                        <h5 class="font-weight-medium mb-2">Rebum lorem eos ipsum diam</h5>
-                        <p class="mb-4">Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna dolor amet</p>
+                        <h5 class="font-weight-medium mb-2">{{ $post->title }}</h5>
+                        <p class="mb-4">{{ $post->short_content }}</p>
                         <a class="btn btn-sm btn-primary py-2" href="">Read More</a>
                     </div>
                 @endforeach
