@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="mb-5">
-                        <img class="img-fluid rounded w-100 mb-4" src="img/carousel-1.jpg" alt="Image">
+                        <img class="img-fluid rounded w-100 mb-4" src="/img/carousel-1.jpg" alt="Image">
                         <p>Sadipscing labore amet rebum est et justo gubergren. Et eirmod ipsum sit diam ut magna lorem.
                             Nonumy vero labore lorem sanctus rebum et lorem magna kasd, stet amet magna accusam
                             consetetur
@@ -41,7 +41,7 @@
                             no
                             diam sit. Dolor erat justo dolore sit invidunt.</p>
                         <h2 class="mb-4">Est dolor lorem et ea</h2>
-                        <img class="img-fluid rounded w-50 float-left mr-4 mb-3" src="img/blog-1.jpg" alt="Image">
+                        <img class="img-fluid rounded w-50 float-left mr-4 mb-3" src="/img/blog-1.jpg" alt="Image">
                         <p>Diam dolor est labore duo invidunt ipsum clita et, sed et lorem voluptua tempor invidunt at
                             est
                             sanctus sanctus. Clita dolores sit kasd diam takimata justo diam lorem sed. Magna amet sed
@@ -62,7 +62,7 @@
                             eos
                             magna, justo gubergren labore sit voluptua eos.</p>
                         <h3 class="mb-4">Est dolor lorem et ea</h3>
-                        <img class="img-fluid rounded w-50 float-right ml-4 mb-3" src="img/blog-2.jpg" alt="Image">
+                        <img class="img-fluid rounded w-50 float-right ml-4 mb-3" src="/img/blog-2.jpg" alt="Image">
                         <p>Diam dolor est labore duo invidunt ipsum clita et, sed et lorem voluptua tempor invidunt at
                             est
                             sanctus sanctus. Clita dolores sit kasd diam takimata justo diam lorem sed. Magna amet sed
@@ -85,7 +85,7 @@
                     <div class="mb-5">
                         <h3 class="mb-4 section-title">3 Comments</h3>
                         <div class="media mb-4">
-                            <img src="img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
+                            <img src="/img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
                             <div class="media-body">
                                 <h6>John Doe <small><i>01 Jan 2045 at 12:00pm</i></small></h6>
                                 <p>Diam amet duo labore stet elitr ea clita ipsum, tempor labore accusam ipsum et no at. Kasd diam tempor rebum magna dolores sed sed eirmod ipsum clita, at tempor amet ipsum diam tempor sit.</p>
@@ -93,13 +93,13 @@
                             </div>
                         </div>
                         <div class="media mb-4">
-                            <img src="img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
+                            <img src="/img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
                             <div class="media-body">
                                 <h6>John Doe <small><i>01 Jan 2045 at 12:00pm</i></small></h6>
                                 <p>Diam amet duo labore stet elitr ea clita ipsum, tempor labore accusam ipsum et no at. Kasd diam tempor rebum magna dolores sed sed eirmod ipsum clita, at tempor amet ipsum diam tempor sit.</p>
                                 <button class="btn btn-sm btn-light">Reply</button>
                                 <div class="media mt-4">
-                                    <img src="img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1"
+                                    <img src="/img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1"
                                         style="width: 45px;">
                                     <div class="media-body">
                                         <h6>John Doe <small><i>01 Jan 2045 at 12:00pm</i></small></h6>
@@ -142,7 +142,7 @@
 
                 <div class="col-lg-4 mt-5 mt-lg-0">
                     <div class="d-flex flex-column text-center bg-secondary rounded mb-5 py-5 px-4">
-                        <img src="img/user.jpg" class="img-fluid rounded-circle mx-auto mb-3" style="width: 100px;">
+                        <img src="/img/user.jpg" class="img-fluid rounded-circle mx-auto mb-3" style="width: 100px;">
                         <h3 class="text-white mb-3">John Doe</h3>
                         <p class="text-white m-0">Conset elitr erat vero dolor ipsum et diam, eos dolor lorem ipsum,
                             ipsum
@@ -184,12 +184,12 @@
                         </ul>
                     </div>
                     <div class="mb-5">
-                        <img src="img/blog-1.jpg" alt="" class="img-fluid rounded">
+                        <img src="/img/blog-1.jpg" alt="" class="img-fluid rounded">
                     </div>
                     <div class="mb-5">
                         <h3 class="mb-4 section-title">Recent Post</h3>
                         <div class="d-flex align-items-center border-bottom mb-3 pb-3">
-                            <img class="img-fluid rounded" src="img/blog-1.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
+                            <img class="img-fluid rounded" src="/img/blog-1.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
                             <div class="d-flex flex-column pl-3">
                                 <a class="text-dark mb-2" href="">Elitr diam amet sit elitr magna ipsum ipsum dolor</a>
                                 <div class="d-flex">
@@ -200,7 +200,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center border-bottom mb-3 pb-3">
-                            <img class="img-fluid rounded" src="img/blog-2.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
+                            <img class="img-fluid rounded" src="/img/blog-2.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
                             <div class="d-flex flex-column pl-3">
                                 <a class="text-dark mb-2" href="">Elitr diam amet sit elitr magna ipsum ipsum dolor</a>
                                 <div class="d-flex">
@@ -211,7 +211,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center border-bottom mb-3 pb-3">
-                            <img class="img-fluid rounded" src="img/blog-3.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
+                            <img class="img-fluid rounded" src="/img/blog-3.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
                             <div class="d-flex flex-column pl-3">
                                 <a class="text-dark mb-2" href="">Elitr diam amet sit elitr magna ipsum ipsum dolor</a>
                                 <div class="d-flex">
@@ -222,7 +222,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center border-bottom mb-3 pb-3">
-                            <img class="img-fluid rounded" src="img/blog-1.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
+                            <img class="img-fluid rounded" src="/img/blog-1.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
                             <div class="d-flex flex-column pl-3">
                                 <a class="text-dark mb-2" href="">Elitr diam amet sit elitr magna ipsum ipsum dolor</a>
                                 <div class="d-flex">
@@ -233,7 +233,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid rounded" src="img/blog-2.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
+                            <img class="img-fluid rounded" src="/img/blog-2.jpg" style="width: 80px; height: 80px; object-fit: cover;" alt="">
                             <div class="d-flex flex-column pl-3">
                                 <a class="text-dark mb-2" href="">Elitr diam amet sit elitr magna ipsum ipsum dolor</a>
                                 <div class="d-flex">
@@ -245,7 +245,7 @@
                         </div>
                     </div>
                     <div class="mb-5">
-                        <img src="img/blog-2.jpg" alt="" class="img-fluid rounded">
+                        <img src="/img/blog-2.jpg" alt="" class="img-fluid rounded">
                     </div>
                     <div class="mb-5">
                         <h3 class="mb-4 section-title">Tag Cloud</h3>
@@ -259,7 +259,7 @@
                         </div>
                     </div>
                     <div class="mb-5">
-                        <img src="img/blog-3.jpg" alt="" class="img-fluid rounded">
+                        <img src="/img/blog-3.jpg" alt="" class="img-fluid rounded">
                     </div>
                     <div>
                         <h3 class="mb-4 section-title">Plain Text</h3>
