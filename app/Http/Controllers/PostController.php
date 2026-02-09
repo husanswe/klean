@@ -17,9 +17,9 @@ class PostController extends Controller
             'photo'         => 'photos/example.jpg',
         ]); */
 
-        $posts = DB::table('posts')->latest()->get();
+        DB::table('posts')->where('id', 2)->get()->dd();
         
-        dd($posts);
+        // dd($posts);
 
         return 'success';
 
