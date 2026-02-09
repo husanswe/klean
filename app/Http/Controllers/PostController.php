@@ -17,13 +17,8 @@ class PostController extends Controller
             'photo'         => 'photos/example.jpg',
         ]); */
 
-        DB::table('posts')->where('id', 2)->get()->dd();
-        
-        // dd($posts);
 
-        return 'success';
-
-        // return view('posts.index');
+        return view('posts.index');
     }
 
     
