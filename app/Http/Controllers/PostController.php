@@ -10,14 +10,14 @@ class PostController extends Controller
 {
     public function index()
     {   
-        Post::create([
+        /* Post::create([
             'title'         => 'My First Real Post',
             'short_content' => 'Short description here',
             'content'       => 'Full long content...',
             'photo'         => 'photos/example.jpg',
-        ]);
+        ]); */
 
-        $posts = Post::whereMonth('updated_at', '02')->get();
+        $posts = DB::table('posts')->latest()->get();
         
         dd($posts);
 
