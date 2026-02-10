@@ -24,7 +24,14 @@ class PostController extends Controller
     
     public function store(Request $request)
     {
-        
+        $post = Post::create([
+            'title' => $request->title,
+            'short_content' => $request->short_content,
+            'content' => $request->content,
+            'photo' => $request->photo ?? null
+        ]);
+
+        return redirect()->route('posts.index');
     }
 
     

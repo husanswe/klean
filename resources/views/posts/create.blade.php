@@ -8,20 +8,25 @@
             <div class="col-lg-7">
                 <div class="contact-form">
                     
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
-
+                    <form action="{{ route('posts.store') }}" method="post">
+                        @csrf
                         <div class="control-group">
-                            <input type="text" class="form-control p-4" id="subject" placeholder="Title" required="required"/>
+                            <input type="text" class="form-control p-4" name="title" placeholder="Title" required="required"/>
                             <p class="help-block text-danger"></p>
                         </div>
 
                         <div class="control-group">
-                            <textarea class="form-control p-4" rows="1" id="message" placeholder="Short description" required="required"></textarea>
+                            <input type="file" class="form-control p-4" placeholder="Image"/>
                             <p class="help-block text-danger"></p>
                         </div>
 
                         <div class="control-group">
-                            <textarea class="form-control p-4" rows="6" id="message" placeholder="Write a post" required="required"></textarea>
+                            <textarea class="form-control p-4" rows="1" name="short_content" placeholder="Short description" required="required"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="control-group">
+                            <textarea class="form-control p-4" rows="6" name="content" placeholder="Write a post" required="required"></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
 
