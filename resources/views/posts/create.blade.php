@@ -9,19 +9,14 @@
                 <div class="contact-form">
                     
                     <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                        <div class="form-row">
-                            <div class="col-sm-6 control-group">
-                                <input type="text" class="form-control p-4" id="name" placeholder="Your Name" required="required"/>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="col-sm-6 control-group">
-                                <input type="email" class="form-control p-4" id="email" placeholder="Your Email" required="required"/>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
 
                         <div class="control-group">
                             <input type="text" class="form-control p-4" id="subject" placeholder="Title" required="required"/>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="control-group">
+                            <textarea class="form-control p-4" rows="1" id="message" placeholder="Short description" required="required"></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
 
