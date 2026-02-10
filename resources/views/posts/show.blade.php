@@ -1,11 +1,11 @@
 <x-layouts.main>
 
     <x-slot:title>
-        Title
+        Post - {{ $post->id }}
     </x-slot:title>
 
     <x-page-hdr>
-        Title
+        Post - {{ $post->id }}
     </x-page-hdr>
 
     <!-- Detail Start -->
