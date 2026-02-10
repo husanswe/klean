@@ -40,11 +40,11 @@
                         <div class="col-lg-7 text-left text-white">
                             <div class="h-100 d-inline-flex align-items-center border-right border-primary py-2 px-3">
                                 <i class="fa fa-envelope text-primary mr-2"></i>
-                                <small>info@example.com</small>
+                                <small>husanswe1@gmail.com</small>
                             </div>
                             <div class="h-100 d-inline-flex align-items-center py-2 px-2">
                                 <i class="fa fa-phone-alt text-primary mr-2"></i>
-                                <small>+99899 888-55-11</small>
+                                <small>+99899 885-64-58</small>
                             </div>
                         </div>
 
@@ -131,7 +131,7 @@
         <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
             <div class="row">
                 <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0 text-white">&copy; <a href="#">Your Site Name</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                    <p class="m-0 text-white">&copy; <a href="#">Klean</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
                     </p>
                 </div>
                 <div class="col-lg-6 text-center text-md-right">
