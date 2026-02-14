@@ -10,7 +10,7 @@
                     <form action="{{ route('posts.store') }}" method="post">
                         @csrf
                         <div class="control-group mb-4">
-                            <input type="text" class="form-control p-4" name="title" placeholder="Title"/>
+                            <input type="text" class="form-control p-4" name="title" value="{{ old('title') }}" placeholder="Title"/>
                             @error('title')
                                 <p class="help-block text-danger">{{ $message }}</p>
                             @enderror
@@ -18,20 +18,20 @@
 
                         <div class="control-group mb-4">
                             <input type="file" class="form-control p-4" placeholder="Image"/>
-                            @error('image')
+                            @error('file')
                                 <p class="help-block text-danger">{{ $message }}</p>
                             @enderror
                         </div>
 
                         <div class="control-group mb-4">
-                            <textarea class="form-control p-4" rows="1" name="short_content" placeholder="Short description"></textarea>
+                            <textarea class="form-control p-4" rows="1" name="short_content" placeholder="Short description">{{ old('short_content') }}</textarea>
                             @error('short_content')
                                 <p class="help-block text-danger">{{ $message }}</p>
                             @enderror
                         </div>
 
                         <div class="control-group mb-4">
-                            <textarea class="form-control p-4" rows="6" name="content" placeholder="Write a post"></textarea>
+                            <textarea class="form-control p-4" rows="6" name="content" placeholder="Write a post">{{ old('content') }}</textarea>
                             @error('content')
                                 <p class="help-block text-danger">{{ $message }}</p>
                             @enderror
