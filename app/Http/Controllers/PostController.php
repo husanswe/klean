@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class PostController extends Controller
 {
@@ -24,6 +25,12 @@ class PostController extends Controller
     
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required',
+            'short_content' => 'required',
+            'content' => 'required',
+        ]);
+
         $post = Post::create([
             'title' => $request->title,
             'short_content' => $request->short_content,
