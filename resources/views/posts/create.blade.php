@@ -11,7 +11,7 @@
                     <form action="{{ route('posts.store') }}" method="post">
                         @csrf
                         <div class="control-group">
-                            <input type="text" class="form-control p-4" name="title" placeholder="Title" required/>
+                            <input type="text" class="form-control p-4" name="title" placeholder="Title"/>
                             <p class="help-block text-danger"></p>
                         </div>
 
@@ -21,12 +21,12 @@
                         </div>
 
                         <div class="control-group">
-                            <textarea class="form-control p-4" rows="1" name="short_content" placeholder="Short description" required></textarea>
+                            <textarea class="form-control p-4" rows="1" name="short_content" placeholder="Short description"></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
 
                         <div class="control-group">
-                            <textarea class="form-control p-4" rows="6" name="content" placeholder="Write a post" required></textarea>
+                            <textarea class="form-control p-4" rows="6" name="content" placeholder="Write a post"></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
 
