@@ -16,8 +16,12 @@
                 <div class="col-lg-8">
                     
                     <div class="text-right">
-                        <a class="btn btn-sm btn-warning mr-3" href="">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="">Delete</a>
+                        <a class="btn btn-sm btn-warning mr-3" href="{{ route('posts.edit', ['post' => $post->id]) }}">
+                            Edit
+                        </a>
+                        <a class="btn btn-sm btn-danger" href="">
+                            Delete
+                        </a>
                     </div>
 
                     <div class="mb-5">
