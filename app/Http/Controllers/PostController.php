@@ -26,6 +26,9 @@ class PostController extends Controller
     
     public function store(StorePostRequest $request)
     {
+        $path = $request->file('photo')->store('post_photos');
+
+        dd($path);
 
         $post = Post::create([
             'title' => $request->title,
