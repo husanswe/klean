@@ -65,7 +65,7 @@
                     <i class="fa fa-3x fa-envelope-open text-primary mr-4"></i>
                     <div class="">
                         <h5 class="mb-2">Email Us</h5>
-                        <p class="m-0">info@example.com</p>
+                        <p class="m-0">sulaymonovhusan2002@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                     <i class="fa fa-3x fa-phone-alt text-secondary mr-4"></i>
                     <div class="">
                         <h5 class="mb-2">Call Us</h5>
-                        <p class="m-0">+012 345 6789</p>
+                        <p class="m-0">+99899 885-64-58</p>
                     </div>
                 </div>
             </div>
