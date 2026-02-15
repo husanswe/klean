@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="contact-form">
-                    <form action="{{ route('posts.store') }}" method="post">
+                    <form action="{{ route('posts.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="control-group mb-4">
                             <input type="text" class="form-control p-4" name="title" value="{{ old('title') }}" placeholder="Title"/>
