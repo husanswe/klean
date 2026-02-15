@@ -15,8 +15,9 @@
             <div class="row">
                 <div class="col-lg-8">
                     
-                    <div class="text-right"">
-                        <a class="btn btn-sm btn-warning" href="">Edit</a>
+                    <div class="text-right">
+                        <a class="btn btn-sm btn-warning mr-3" href="">Edit</a>
+                        <a class="btn btn-sm btn-danger" href="">Delete</a>
                     </div>
 
                     <div class="mb-5">
