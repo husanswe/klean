@@ -53,13 +53,13 @@ class PostController extends Controller
     }
 
     
-    public function edit(string $id)
+    public function edit(Post $post)
     {
-        
+        return view('posts.edit')->with(['post' => $post]);
     }
 
     
-    public function update(Request $request, string $id)
+    public function update(Request $request, Post $post)
     {
         
     }

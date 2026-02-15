@@ -11,8 +11,14 @@
     <!-- Detail Start -->
     <div class="container-fluid py-5">
         <div class="container">
+            
             <div class="row">
                 <div class="col-lg-8">
+                    
+                    <div class="text-right"">
+                        <a class="btn btn-sm btn-warning" href="">Edit</a>
+                    </div>
+
                     <div class="mb-5">
                         <div class="d-flex mb-2">
                             <a class="text-secondary text-uppercase font-weight-medium" href="">Admin</a>
