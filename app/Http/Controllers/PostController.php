@@ -29,7 +29,7 @@ class PostController extends Controller
         if($request->hasFile('photo'))
         {
             $name = $request->file('photo')->getClientOriginalName();
-            $path = $request->file('photo')->storeAs('post_photos', 'public', $name);
+            $path = $request->file('photo')->storeAs('post_photos', $name, 'public');
         }
         
 
