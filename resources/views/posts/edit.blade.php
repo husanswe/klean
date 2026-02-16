@@ -43,10 +43,13 @@
                             @enderror
                         </div>
 
-                        <div>
-                            <button class="btn btn-primary btn-block py-3 px-5" type="submit">
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-success py-3 px-5" type="submit">
                                 Save
                             </button>
+                            <a href="{{ route('posts.show', ['post' => $post->id]) }}" class="btn btn-danger py-3 px-5">
+                                Cancel
+                            </a>
                         </div>
                     </form>
 
