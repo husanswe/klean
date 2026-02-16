@@ -38,7 +38,7 @@ class PostController extends Controller
             'title' => $request->title,
             'short_content' => $request->short_content,
             'content' => $request->content,
-            'photo' => $path ?? null
+            'photo' => $path ?? null,
         ]);
 
         return redirect()->route('posts.index');
@@ -75,9 +75,11 @@ class PostController extends Controller
         $post->update ([
             'title' => $request->title,
             'short_content' => $request->short_content,
-            'content' => $request->conent,
-            'photo' => $path ?? null,
+            'content' => $request->content,
+            'photo' => $path ?? $post->photo,
         ]);
+
+        return redirect()->route('posts.show', ['post' => $post->id]);
     }
 
     
