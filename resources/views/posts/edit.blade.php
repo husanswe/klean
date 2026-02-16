@@ -12,10 +12,11 @@
             <div class="col-lg-7">
                 <div class="contact-form">
                     
-                    <form action="{{ route('posts.store') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('posts.update', ['post' = $post->id]') }}" method="post" enctype="multipart/form-data">
+                        @method('PUT')
                         @csrf
                         <div class="control-group mb-4">
-                            <input type="text" class="form-control p-4" name="title" value="{{ old('title') }}" placeholder="Title"/>
+                            <input type="text" class="form-control p-4" name="title" value="{{ $post->title }}" placeholder="Title"/>
                             @error('title')
                                 <p class="help-block text-danger">{{ $message }}</p>
                             @enderror
