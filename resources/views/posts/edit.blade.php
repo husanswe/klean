@@ -12,7 +12,7 @@
             <div class="col-lg-7">
                 <div class="contact-form">
                     
-                    <form action="{{ route('posts.update', ['post' = $post->id]') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('posts.update', ['post' => $post->id]) }}" method="post" enctype="multipart/form-data">
                         @method('PUT')
                         @csrf
                         <div class="control-group mb-4">
@@ -30,14 +30,14 @@
                         </div>
 
                         <div class="control-group mb-4">
-                            <textarea class="form-control p-4" rows="1" name="short_content" placeholder="Short description">{{ old('short_content') }}</textarea>
+                            <textarea class="form-control p-4" rows="1" name="short_content" placeholder="Short description">{{ $post->short_content }}</textarea>
                             @error('short_content')
                                 <p class="help-block text-danger">{{ $message }}</p>
                             @enderror
                         </div>
 
                         <div class="control-group mb-4">
-                            <textarea class="form-control p-4" rows="6" name="content" placeholder="Write a post">{{ old('content') }}</textarea>
+                            <textarea class="form-control p-4" rows="6" name="content" placeholder="Write a post">{{ $post->content }}</textarea>
                             @error('content')
                                 <p class="help-block text-danger">{{ $message }}</p>
                             @enderror
