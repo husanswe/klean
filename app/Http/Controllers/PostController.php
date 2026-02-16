@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Symfony\Contracts\Service\Attribute\Required;
 
 class PostController extends Controller
@@ -59,9 +60,24 @@ class PostController extends Controller
     }
 
     
-    public function update(Request $request, Post $post)
+    public function update(StorePostRequest $request, Post $post)
     {
-        
+        if($request->hasFile('photo'))
+        {
+            if(isset($post->photo)) {
+                Storage::delete($post->photo);
+            }
+
+            $name = $request->file('photo')->getClientOriginalName();
+            $path = $request->file('photo')->storeAs('post_photos', $name, 'public');
+        }
+
+        $post->update ([
+            'title' => $request->title,
+            'short_content' => $request->short_content,
+            'content' => $request->conent,
+            'photo' => $path ?? null,
+        ]);
     }
 
     
