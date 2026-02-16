@@ -20,7 +20,8 @@
                             Edit
                         </a>
                         
-                        <form action="{{ route('posts.destroy', ['post' => $post->id]) }}" method="post">
+                        <form action="{{ route('posts.destroy', ['post' => $post->id]) }}" method="post"
+                            onsubmit="return confirm('Are you sure you wish to delete?');">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-sm btn-danger" type="submit">
