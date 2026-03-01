@@ -17,8 +17,8 @@ return new class extends Migration
             $table->text('short_content');
             $table->text('content');
             $table->string('photo')->nullable();
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
