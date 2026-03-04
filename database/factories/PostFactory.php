@@ -20,7 +20,8 @@ class PostFactory extends Factory
             'user_id'=> 1,
             'title' => fake()->sentence(),
             'short_content' => fake()->sentence(10),
-            'content' => fake()->parapgraph(20)
+            'content' => fake()->paragraph(20),
+            'photo' => null,
         ];
     }
 }
