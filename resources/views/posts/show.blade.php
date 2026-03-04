@@ -75,12 +75,13 @@
                             <input type="url" class="form-control" id="website">
                         </div> --}}
                         
-                        <form action="" method="post">
+                        <form action="{{ route('comments.store') }}" method="post">
                             @csrf
                             <div class="form-group">
                                 <label for="message">Message</label>
                                 <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
                             </div>
+                            <input type="hidden" name="post_id" value="{{ $post->id }}">
                             <div class="form-group mb-0">
                                 <input type="submit" value="Submit" class="btn btn-primary">
                             </div>
