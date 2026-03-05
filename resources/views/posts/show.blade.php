@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="mb-5">
-                        <h3 class="mb-4 section-title">Comments</h3>
+                        <h3 class="mb-4 section-title">{{ $post->comments()->count() }} Comments</h3>
                         <div class="media mb-4">
                             <img src="/img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
                             <div class="media-body">
@@ -79,7 +79,7 @@
                             @csrf
                             <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
+                                <textarea name="body" cols="30" rows="5" class="form-control"></textarea>
                             </div>
                             <input type="hidden" name="post_id" value="{{ $post->id }}">
                             <div class="form-group mb-0">
