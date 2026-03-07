@@ -13,6 +13,14 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        Category::create(['name' => 'Web Design']);
+        $data = [
+            ['name' => 'Web Design'],
+            ['name' => 'Web Development'],
+            ['name' => 'Online Marketing'],
+            ['name' => 'Keyword Research'],
+            ['name' => 'Email Marketing'],
+        ];
+
+        Category::insert($data);
     }
 }
