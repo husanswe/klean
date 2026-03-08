@@ -17,8 +17,8 @@
                         </div>
 
                         <div class="control-group mb-4">
-                            <input type="text" class="form-control p-4" name="category" value="{{ old('category') }}" placeholder="Category"/>
-                            @error('title')
+                            <input type="text" class="form-control p-4" value="{{ old('category') }}" placeholder="Category"/>
+                            @error('category')
                                 <p class="help-block text-danger">{{ $message }}</p>
                             @enderror
                             <select name="category_id">
