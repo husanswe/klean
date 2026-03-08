@@ -18,7 +18,7 @@ class PostFactory extends Factory
     {
         return [
             'user_id'=> 1,
-            'category_id' => rand(1, 5),
+            'category_id' => \App\Models\Category::inRandomOrder()->first()->id,
             'title' => fake()->sentence(),
             'short_content' => fake()->sentence(10),
             'content' => fake()->paragraph(20),

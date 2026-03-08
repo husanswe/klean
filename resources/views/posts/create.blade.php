@@ -21,10 +21,10 @@
                             @error('title')
                                 <p class="help-block text-danger">{{ $message }}</p>
                             @enderror
-                            <select style="margin-top: 25px;" name="category_id">
+                            <select name="category_id">
                                 <option style="color: #a6adb4;" value="">Select category</option>
                                 @foreach ($categories as $category)
-                                    <option value="{{$category->id}}">{{ $category->name }}</option>
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
                             </select>
                         </div>
