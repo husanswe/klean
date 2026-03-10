@@ -32,7 +32,6 @@ class PostController extends Controller
     
     public function store(StorePostRequest $request)
     {
-        dd($request);
 
         if($request->hasFile('photo'))
         {
@@ -49,6 +48,13 @@ class PostController extends Controller
             'content' => $request->content,
             'photo' => $path ?? null,
         ]);
+
+        if(isset($request->tags))
+        {
+            foreach ($request->tags as $tag){
+                $post->tags()->attach($tag);
+            }
+        }
 
         return redirect()->route('posts.index');
     }
