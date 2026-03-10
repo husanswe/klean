@@ -9,7 +9,7 @@
                 <div class="contact-form">
                     <form action="{{ route('posts.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <div class="control-group mb-4">
+                        <div class="control-group mb-1">
                             <input type="text" class="form-control p-4" name="title" value="{{ old('title') }}" placeholder="Title"/>
                             @error('title')
                                 <p class="help-block text-danger">{{ $message }}</p>
@@ -17,10 +17,6 @@
                         </div>
 
                         <div class="control-group mb-4">
-                            <input type="text" name="category" class="form-control p-4" value="{{ old('category') }}" placeholder="Category"/>
-                            @error('category')
-                                <p class="help-block text-danger">{{ $message }}</p>
-                            @enderror
                             <select class="mt-4" name="category_id" 
                                     style="width: 100%;
                                        padding: 12px 16px;
