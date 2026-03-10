@@ -32,6 +32,8 @@ class PostController extends Controller
     
     public function store(StorePostRequest $request)
     {
+        dd($request);
+
         if($request->hasFile('photo'))
         {
             $name = $request->file('photo')->getClientOriginalName();

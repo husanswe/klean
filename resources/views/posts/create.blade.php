@@ -55,7 +55,7 @@
                                        color: #999;
                                        background-color: #fff;
                                        appearance: none;">
-                                <option style="color: #999;" value="">Select category</option>
+                                <option style="color: #999;" value="">Choose a category</option>
                                 @foreach ($categories as $category)
                                     <option style="color: #000;" value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
@@ -64,7 +64,7 @@
 
                         <div class="control-group mb-4">
                             <select class="mt-1 form-control" name="tags[]" id="tags" multiple> 
-                                <option style="color: #999;" value="" disabled> Select tag </option>
+                                <option style="color: #999;" value="" disabled> Choose a tag </option>
                                 @foreach ($tags as $tag)
                                     <option style="color: #000;" value="{{ $tag->id }}">{{ $tag->name }}</option>
                                 @endforeach
@@ -108,7 +108,7 @@
         new Choices('#tags', {
             removeItemButton: true,
             placeholder: true,
-            placeholderValue: 'Select tag',
+            placeholderValue: 'Choose a tag',
         });
     </script>
 
