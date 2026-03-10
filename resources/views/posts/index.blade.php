@@ -33,9 +33,10 @@
                         </div>
 
                         <div class="d-flex mb-2">
-                            <a class="text-secondary text-uppercase font-weight-medium" href="">Admin</a>
-                            <span class="text-primary px-2">|</span>
-                            <a class="text-secondary text-uppercase font-weight-medium" href="">Cleaning</a>
+                            @foreach ($post->tags as $tag)
+                                <a class="text-secondary text-uppercase font-weight-medium">{{ $tag->name }}</a>
+                                <span class="text-primary px-2">|</span>
+                            @endforeach
                         </div>
 
                         <div class="d-flex mb-2">
