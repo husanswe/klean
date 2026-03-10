@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="control-group mb-4">
-                            <input name="photo" type="file" class="form-control p-4" placeholder="photo"/>
+                            <input name="photo" type="file" class="form-control  pt-3 pb-5" style="padding-left: 5%;" placeholder="photo"/>
                             @error('photo')
                                 <p class="help-block text-danger">{{ $message }}</p>
                             @enderror
