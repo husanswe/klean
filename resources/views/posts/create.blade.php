@@ -17,14 +17,23 @@
                         </div>
 
                         <div class="control-group mb-4">
-                            <input type="text" class="form-control p-4" value="{{ old('category') }}" placeholder="Category"/>
+                            <input type="text" name="category" class="form-control p-4" value="{{ old('category') }}" placeholder="Category"/>
                             @error('category')
                                 <p class="help-block text-danger">{{ $message }}</p>
                             @enderror
-                            <select name="category_id">
-                                <option style="color: #a6adb4;" value="">Select category</option>
+                            <select class="mt-4" name="category_id" 
+                                    style="width: 100%;
+                                       padding: 12px 16px;
+                                       border: 1px solid #ccc;
+                                       border-radius: 50px;
+                                       outline: none;
+                                       font-size: 16px;
+                                       color: #999;
+                                       background-color: #fff;
+                                       appearance: none;">
+                                <option style="color: #999;" value="">Select category</option>
                                 @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    <option style="color: #000;" value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
                             </select>
                         </div>
