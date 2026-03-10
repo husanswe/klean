@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\Tag;
 use App\Http\Requests\StorePostRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -24,7 +25,8 @@ class PostController extends Controller
     {
         return view('posts.create')->with([
             'categories' => Category::all(),
-        ]);
+            'tags' => Tag::all(),
+        ]); 
     }
 
     

@@ -1,6 +1,30 @@
 <x-layouts.main>
     <x-slot:title>Create Post</x-slot:title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    
+    <style>
+        .choices__inner {
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            background-color: #fff;
+            padding: 8px 16px;
+            font-size: 16px;
+            min-height: unset;
+        }
+        
+        .choices__list--dropdown {
+            border-radius: 15px;
+            border: 1px solid #ccc;
+        }
+        
+        .choices[data-type*=select-multiple] .choices__inner {
+            border-radius: 50px;
+        }
+    </style>
+        
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
     <x-page-hdr>Create New Post</x-page-hdr>
 
     <div class="container py-5">
@@ -30,6 +54,15 @@
                                 <option style="color: #999;" value="">Select category</option>
                                 @foreach ($categories as $category)
                                     <option style="color: #000;" value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="control-group mb-4">
+                            <select class="mt-1 form-control" name="tag_id[]" id="tag_id" multiple> 
+                                <option style="color: #999;" value="">Select tag</option>
+                                @foreach ($tags as $tag)
+                                    <option style="color: #000;" value="{{ $tag->id }}">{{ $tag->name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -66,6 +99,14 @@
             </div>
         </div>
     </div>
+
+    <script>
+        new Choices('#tag_id', {
+            removeItemButton: true,
+            placeholder: true,
+            placeholderValue: 'Select tag',
+        });
+    </script>
 
 </x-layouts.main>
 
