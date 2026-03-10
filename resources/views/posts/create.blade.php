@@ -21,6 +21,10 @@
         .choices[data-type*=select-multiple] .choices__inner {
             border-radius: 50px;
         }
+
+        .choices__item[data-value=""] {
+            display: none;
+        }
     </style>
         
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
@@ -59,8 +63,8 @@
                         </div>
 
                         <div class="control-group mb-4">
-                            <select class="mt-1 form-control" name="tag_id[]" id="tag_id" multiple> 
-                                <option style="color: #999;" value="">Select tag</option>
+                            <select class="mt-1 form-control" name="tags[]" id="tags" multiple> 
+                                <option style="color: #999;" value="" disabled> Select tag </option>
                                 @foreach ($tags as $tag)
                                     <option style="color: #000;" value="{{ $tag->id }}">{{ $tag->name }}</option>
                                 @endforeach
@@ -101,7 +105,7 @@
     </div>
 
     <script>
-        new Choices('#tag_id', {
+        new Choices('#tags', {
             removeItemButton: true,
             placeholder: true,
             placeholderValue: 'Select tag',
