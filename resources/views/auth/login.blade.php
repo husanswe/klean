@@ -10,7 +10,7 @@
                 </div>
                 
                 <div class="panel-body p-3">
-                    <form action="" method="POST">
+                    <form action="{{ route('authenticate') }}" method="post">
                         @csrf
                         <div class="form-group py-2">
                             <div class="input-field"> <span class="far fa-user p-2"></span> 
@@ -32,9 +32,9 @@
                             <a href="#" id="forgot" class="font-weight-bold">Forgot password?</a> 
                         </div>
 
-                        <div class="btn btn-primary btn-block mt-3">
+                        <button type="submit" class="btn btn-primary btn-block mt-3">
                             Login
-                        </div>
+                        </button>
 
                         <div class="text-center pt-4 text-muted">Don't have an account? 
                             <a href="#">Sign up</a> 
