@@ -37,7 +37,7 @@
                         </button>
 
                         <div class="text-center pt-4 text-muted">Don't have an account? 
-                            <a href="#">Sign up</a> 
+                            <a href="{{ route('register') }}">Sign up</a> 
                         </div>
                     </form>
                 </div>
