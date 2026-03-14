@@ -17,7 +17,7 @@ use App\Http\Controllers\PageController;
     Route::post('authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
-
+    
     Route::resources([
         'posts' => PostController::class,
         'comments' => CommentController::class,
