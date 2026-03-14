@@ -14,6 +14,12 @@
                         @csrf
                         <div class="form-group py-2">
                             <div class="input-field"> <span class="far fa-user p-2"></span> 
+                                <input name="name" type="text" placeholder="Your Name" required> 
+                            </div>
+                        </div>
+
+                        <div class="form-group py-2">
+                            <div class="input-field"> <span class="far fa-envelope p-2"></span> 
                                 <input name="email" type="text" placeholder="Email" required> 
                             </div>
                         </div>
@@ -21,6 +27,15 @@
                         <div class="form-group py-1 pb-2">
                             <div class="input-field"> <span class="fas fa-lock px-2"></span> 
                                 <input name="password" type="password" placeholder="Password" required> 
+                                <button type="button" class="btn bg-white text-muted" id="togglePassword"> 
+                                    <span class="far fa-eye-slash"></span> 
+                                </button> 
+                            </div>
+                        </div>
+
+                        <div class="form-group py-1 pb-2">
+                            <div class="input-field"> <span class="fas fa-lock px-2"></span> 
+                                <input name="password_confirmation" type="password" placeholder="Confirm your password" required> 
                                 <button type="button" class="btn bg-white text-muted" id="togglePassword"> 
                                     <span class="far fa-eye-slash"></span> 
                                 </button> 
