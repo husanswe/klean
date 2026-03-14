@@ -10,7 +10,7 @@
                 </div>
                 
                 <div class="panel-body p-3">
-                    <form action="{{ route('authenticate') }}" method="post">
+                    <form action="{{ route('register.user') }}" method="post">
                         @csrf
                         <div class="form-group py-2">
                             <div class="input-field"> <span class="far fa-user p-2"></span> 
@@ -40,10 +40,6 @@
                                     <span class="far fa-eye-slash"></span> 
                                 </button> 
                             </div>
-                        </div>
-
-                        <div class="form-inline"> <input type="checkbox" name="remember" id="remember"> 
-                            <label for="remember" class="text-muted">Remember me</label> 
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-block mt-3">

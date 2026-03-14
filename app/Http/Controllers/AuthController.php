@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
+use App\Models\User;
 
 class AuthController extends Controller
 {
@@ -34,6 +35,22 @@ class AuthController extends Controller
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
+    }
+
+    public function register_user(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email:rfc,dns|unique:users,email',
+            'password' => 'required|min:8',
+            'password_confirmation' => 'required|same:password'
+        ]);
+
+        $user = User::create($validated);
+
+        Auth::login($user);
+
+        return redirect('main')->with('success', "Account successfully registered.");
     }
 
     public function logout(Request $request): RedirectResponse

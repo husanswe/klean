@@ -17,7 +17,7 @@ use App\Http\Controllers\PageController;
     Route::post('authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('register', [AuthController::class, 'register'])->name('register');
-
+    Route::post('register', [AuthController::class, 'register_user'])->name('register.user');
     
     Route::resources([
         'posts' => PostController::class,
