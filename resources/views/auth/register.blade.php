@@ -34,6 +34,10 @@
                         <button type="submit" class="btn btn-primary btn-block mt-3">
                             Sign up
                         </button>
+
+                        <div class="text-center pt-4 text-muted">Already have an account? 
+                            <a href="{{ route('login') }}">Login</a> 
+                        </div>
                     </form>
                 </div>
 
