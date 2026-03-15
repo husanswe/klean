@@ -61,7 +61,6 @@
                                 <div class="media-body">
                                     <h6>{{ $comment->user->name }} <small><i>{{ $comment->created_at }}</i></small></h6>
                                     <p>{{ $comment->body }}</p>
-                                    {{-- <button class="btn btn-sm btn-light">Reply</button> --}}
                                 </div>
                             </div>
                         @endforeach
