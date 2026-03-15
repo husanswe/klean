@@ -68,33 +68,25 @@
                     </div>
 
                     <div class="bg-light rounded p-5">
-                        <h3 class="mb-4 section-title">Leave a comment</h3>
-                        {{-- <div class="form-row">
-                            <div class="form-group col-sm-6">
-                                <label for="name">Name *</label>
-                                <input type="text" class="form-control" id="name">
+                        <h3 class="mb-4 section-title">Leave a comment</h3> 
+                        @auth  
+                            <form action="{{ route('comments.store') }}" method="post">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea name="body" cols="30" rows="5" class="form-control"></textarea>
+                                </div>
+                                <input type="hidden" name="post_id" value="{{ $post->id }}">
+                                <div class="form-group mb-0">
+                                    <input type="submit" value="Submit" class="btn btn-primary">
+                                </div>
+                            </form>
+                        @else
+                            <div>
+                                Login to leave comment
+                                <a href="{{ route('login') }}" class="btn btn-primary ml-3">Login</a>
                             </div>
-                            <div class="form-group col-sm-6">
-                                <label for="email">Email *</label>
-                                <input type="email" class="form-control" id="email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="website">Website</label>
-                            <input type="url" class="form-control" id="website">
-                        </div> --}}
-                        
-                        <form action="{{ route('comments.store') }}" method="post">
-                            @csrf
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea name="body" cols="30" rows="5" class="form-control"></textarea>
-                            </div>
-                            <input type="hidden" name="post_id" value="{{ $post->id }}">
-                            <div class="form-group mb-0">
-                                <input type="submit" value="Submit" class="btn btn-primary">
-                            </div>
-                        </form>
+                        @endauth
                     </div>
                 </div>
 
