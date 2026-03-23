@@ -89,14 +89,14 @@
                     </a>
                     <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
                     <h5 class="font-weight-semi-bold text-white mb-2">Opening Hours:</h5>
-                    <p class="mb-1">Mon – Sat, 8AM – 5PM</p>
+                    <p class="mb-1">Mon – Sat, 8AM – 8PM</p>
                     <p class="mb-0">Sunday: Closed</p>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-5">
                     <h4 class="font-weight-semi-bold text-primary mb-4">Get In Touch</h4>
-                    <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt text-primary mr-2"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope text-primary mr-2"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>123 Street ABC, Tashkent, Uzbekistan</p>
+                    <p><i class="fa fa-phone-alt text-primary mr-2"></i>+998998856458</p>
+                    <p><i class="fa fa-envelope text-primary mr-2"></i>sulaymonovhusan2002@gmail.com</p>
                     <div class="d-flex justify-content-start mt-4">
                         <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
