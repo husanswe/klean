@@ -44,7 +44,7 @@
                             </div>
                             <div class="h-100 d-inline-flex align-items-center py-2 px-2">
                                 <i class="fa fa-phone-alt text-primary mr-2"></i>
-                                <small>+99899 885-64-58</small>
+                                <small>+998 99 885-64-58</small>
                             </div>
                         </div>
 
