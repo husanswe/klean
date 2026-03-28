@@ -87,6 +87,8 @@ class PostController extends Controller
     
     public function update(StorePostRequest $request, Post $post)
     {
+        Gate::authorize('update-post', $post);
+
         if($request->hasFile('photo'))
         {
             if(isset($post->photo)) {
