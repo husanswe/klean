@@ -15,11 +15,12 @@
             <div class="row">
                 <div class="col-lg-8">
                     @auth
-                        <div class="d-flex justify-content-end mb-4">
+                        @can('update-post', $post)
+                        <div class="d-flex justify-content-end mb-4">  
                             <a class="btn btn-sm btn-warning mr-3" href="{{ route('posts.edit', ['post' => $post->id]) }}">
                                 Edit
                             </a>
-                            
+
                             <form action="{{ route('posts.destroy', ['post' => $post->id]) }}" method="post"
                                 onsubmit="return confirm('Are you sure you wish to delete?');">
                                 @csrf
@@ -29,6 +30,7 @@
                                 </button>
                             </form>
                         </div>
+                        @endcan
                     @endauth
 
                     <div class="mb-5">
