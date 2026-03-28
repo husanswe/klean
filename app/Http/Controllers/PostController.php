@@ -79,9 +79,7 @@ class PostController extends Controller
     
     public function edit(Post $post)
     {
-        if (! Gate::allows('update-post', $post)) {
-            abort(403);
-        }
+        Gate::authorize('update-post', $post);
 
         return view('posts.edit')->with(['post' => $post]);
     }
