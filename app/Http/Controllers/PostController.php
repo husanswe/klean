@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Routing\Controller;
+use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\Tag;
@@ -11,14 +11,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class PostController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth')->except(['index', 'show']);
-    }
-
+    use AuthorizesRequests;
+   
     public function index()
     {   
         $posts = Post::latest()->paginate(6);
@@ -79,7 +77,8 @@ class PostController extends Controller
     
     public function edit(Post $post)
     {
-        Gate::authorize('update', $post);
+        // Gate::authorize('update', $post);
+        $this->authorize('update', $post);
 
         return view('posts.edit')->with(['post' => $post]);
     }
@@ -87,7 +86,8 @@ class PostController extends Controller
     
     public function update(StorePostRequest $request, Post $post)
     {
-        Gate::authorize('update', $post);
+        // Gate::authorize('update', $post);
+        $this->authorize('update', $post);
 
         if($request->hasFile('photo'))
         {

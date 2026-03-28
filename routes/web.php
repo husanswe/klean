@@ -20,11 +20,11 @@
     Route::get('register', [AuthController::class, 'register'])->name('register');
     Route::post('register', [AuthController::class, 'register_user'])->name('register.user');
     
-
-    Route::resources([
-        'posts' => PostController::class,
-        'users' => UserController::class,     
-    ]);
+    Route::resource('posts', PostController::class)->only(['index', 'show']);
+    
+    Route::resource('posts', PostController::class)
+        ->middleware('auth')
+        ->except(['index', 'show']);
 
     Route::resource('comments', CommentController::class)->middleware('auth');
 
