@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     @auth
-                        @canany(['update-post', 'delete-post'], $post)
+                        @canany(['update', 'delete'], $post)
                         <div class="d-flex justify-content-end mb-4">  
                             <a class="btn btn-sm btn-warning mr-3" href="{{ route('posts.edit', ['post' => $post->id]) }}">
                                 Edit

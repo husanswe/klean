@@ -79,7 +79,9 @@ class PostController extends Controller
     
     public function edit(Post $post)
     {
-        Gate::authorize('update-post', $post);
+        // Gate::authorize('update-post', $post);
+        
+        Gate::authorize('update', $post);
 
         return view('posts.edit')->with(['post' => $post]);
     }
@@ -87,7 +89,9 @@ class PostController extends Controller
     
     public function update(StorePostRequest $request, Post $post)
     {
-        Gate::authorize('update-post', $post);
+        // Gate::authorize('update-post', $post);
+
+        Gate::authorize('update', $post);
 
         if($request->hasFile('photo'))
         {
