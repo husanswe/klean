@@ -16,7 +16,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class PostController extends Controller
 {
     use AuthorizesRequests;
-   
+
     public function index()
     {   
         $posts = Post::latest()->paginate(6);
@@ -77,16 +77,13 @@ class PostController extends Controller
     
     public function edit(Post $post)
     {
-        // Gate::authorize('update', $post);
         $this->authorize('update', $post);
-
         return view('posts.edit')->with(['post' => $post]);
     }
 
     
     public function update(StorePostRequest $request, Post $post)
     {
-        // Gate::authorize('update', $post);
         $this->authorize('update', $post);
 
         if($request->hasFile('photo'))
@@ -112,6 +109,8 @@ class PostController extends Controller
     
     public function destroy(Post $post)
     {
+        $this->authorize('delete', $post);
+        
         if(isset($post->photo)) {
             Storage::disk('public')->delete($post->photo);
         }
