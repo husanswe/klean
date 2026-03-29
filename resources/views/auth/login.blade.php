@@ -54,4 +54,11 @@
     </div>
 </div>
 
+<script>
+    document.getElementById('togglePassword').addEventListener('click', function() {
+        const input = document.querySelector('input[name="password"]');
+        input.type = input.type === 'password' ? 'text' : 'password';
+    });
+</script>
+
 </x-layouts.auth>
