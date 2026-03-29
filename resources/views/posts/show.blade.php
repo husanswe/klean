@@ -56,16 +56,38 @@
 
                     <div class="mb-5">
                         <h3 class="mb-4 section-title">{{ $post->comments()->count() }} Comments</h3>
-
+                        
                         @foreach ($post->comments as $comment)
-                            <div class="media mb-4">
-                                <img src="/img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
-                                <div class="media-body">
-                                    <h6>{{ $comment->user->name }} <small><i>{{ $comment->created_at }}</i></small></h6>
-                                    <p>{{ $comment->body }}</p>
-                                </div>
+                        <div class="media mb-4">
+                            <img src="/img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
+                            <div class="media-body">
+                                <h6>{{ $comment->user->name }} <small><i>{{ $comment->created_at }}</i></small></h6>
+                                <p>{{ $comment->body }}</p>
                             </div>
+                        </div>
                         @endforeach
+                        
+                        @can('update', $comment)
+                            <button type="button" class="btn btn-sm" onclick="document.getElementById('edit-comment-{{ $comment->id }}').style.display='block'; this.style.display='none';">
+                                <i class="fa-solid fa-pen-to-square" style="color: rgb(255, 212, 59);"></i>
+                            </button>
+                            
+                            <form id="edit-comment-{{ $comment->id }}" action="{{ route('comments.update', $comment->id) }}" method="POST" style="display:none;">
+                                @csrf
+                                @method('PUT')
+                                <textarea name="body" class="form-control">{{ $comment->body }}</textarea>
+                                <button type="submit" class="btn btn-primary btn-sm mt-1">Save</button>
+                                <button type="button" class="btn btn-secondary btn-sm mt-1" onclick="this.closest('form').style.display='none';">Cancel</button>
+                            </form>
+
+                            <form action="{{ route('comments.destroy', $comment->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-sm" onclick="return confirm('Are you sure you want to delete this comment?')">
+                                    <i class="fa-regular fa-trash-can" style="color: rgb(255, 212, 59);"></i>
+                                </button>
+                            </form>
+                        @endcan
                     </div>
 
                     <div class="bg-light rounded p-5">
