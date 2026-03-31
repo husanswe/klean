@@ -21,6 +21,6 @@ class SendEmailToUser
      */
     public function handle(PostCreated $event): void
     {
-        //
+        $event->post;
     }
 }
