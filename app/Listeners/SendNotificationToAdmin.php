@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use App\Events\PostCreated;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
@@ -21,6 +22,6 @@ class SendNotificationToAdmin
      */
     public function handle(PostCreated $event): void
     {
-        //
+        Log::alert('Post has been created.');
     }
 }
