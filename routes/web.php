@@ -19,9 +19,9 @@
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('register', [AuthController::class, 'register'])->name('register');
     Route::post('register', [AuthController::class, 'register_user'])->name('register.user');
-    
-    
-    Route::resource('posts', PostController::class)->only(['index', 'show']);
+
+
+    Route::resource('posts', PostController::class)->only(['index', 'show', 'create']);
 
     Route::resource('posts', PostController::class)
         ->middleware('auth')
