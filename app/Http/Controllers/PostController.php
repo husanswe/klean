@@ -80,14 +80,14 @@ class PostController extends Controller
     
     public function edit(Post $post)
     {
-        $this->authorize('update', $post);
+        Gate::authorize('update', $post);
         return view('posts.edit')->with(['post' => $post]);
     }
 
     
     public function update(StorePostRequest $request, Post $post)
     {
-        $this->authorize('update', $post);
+        Gate::authorize('update', $post);
 
         if($request->hasFile('photo'))
         {
