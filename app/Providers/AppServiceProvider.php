@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Events\PostCreated;
+use App\Listeners\SendEmailToUser;
+use App\Listeners\SendNotificationToAdmin;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Event;
@@ -22,9 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-            Event::listen (
-            PostCreated::class,
-        );
+        Event::listen (PostCreated::class, SendEmailToUser::class);
+        Event::listen(PostCreated::class, SendNotificationToAdmin::class);
 
         Paginator::useBootstrapFour();
     }
