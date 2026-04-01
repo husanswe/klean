@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Events\PostCreated;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Event;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,6 +22,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+            Event::listen (
+            PostCreated::class,
+        );
+
         Paginator::useBootstrapFour();
     }
 }

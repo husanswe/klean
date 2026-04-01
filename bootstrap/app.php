@@ -11,9 +11,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
 
-    ->withProviders([
-    App\Providers\EventServiceProvider::class,
-    ])
+    ->withMiddleware(function (Middleware $middleware) {
+        $middleware->redirectGuestsTo('/login');
+    })
 
     ->withMiddleware(function (Middleware $middleware): void {
         //
