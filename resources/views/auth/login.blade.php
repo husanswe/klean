@@ -10,7 +10,7 @@
                 </div>
                 
                 <div class="panel-body p-3">
-                    <form action="{{ route('authenticate') }}" method="post">
+                    <form action="{{ route('authenticate') }}" method="post" autocomplete="off">
                         @csrf
                         <div class="form-group py-2">
                             <div class="input-field"> <span class="far fa-user p-2"></span> 
@@ -20,7 +20,7 @@
 
                         <div class="form-group py-1 pb-2">
                             <div class="input-field"> <span class="fas fa-lock px-2"></span> 
-                                <input name="password" type="password" placeholder="Password" required> 
+                                <input name="password" type="password" placeholder="Password" autocomplete="new-password" required> 
                                 <button type="button" class="btn bg-white text-muted" id="togglePassword"> 
                                     <span class="far fa-eye-slash"></span> 
                                 </button> 

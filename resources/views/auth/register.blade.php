@@ -12,6 +12,15 @@
                 <div class="panel-body p-3">
                     <form action="{{ route('register.user') }}" method="post">
                         @csrf
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <div class="form-group py-2">
                             <div class="input-field"> <span class="far fa-user p-2"></span> 
                                 <input name="name" type="text" placeholder="Your Name" required> 
