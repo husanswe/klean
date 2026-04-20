@@ -36,7 +36,7 @@
                         <div class="form-group py-1 pb-2">
                             <div class="input-field"> <span class="fas fa-lock px-2"></span> 
                                 <input name="password" type="password" placeholder="Password" required> 
-                                <button type="button" class="btn bg-white text-muted" id="togglePassword"> 
+                                <button type="button" class="btn bg-white text-muted" id="togglePassword1"> 
                                     <span class="far fa-eye-slash"></span> 
                                 </button> 
                             </div>
@@ -45,7 +45,7 @@
                         <div class="form-group py-1 pb-2">
                             <div class="input-field"> <span class="fas fa-lock px-2"></span> 
                                 <input name="password_confirmation" type="password" placeholder="Confirm your password" required> 
-                                <button type="button" class="btn bg-white text-muted" id="togglePassword"> 
+                                <button type="button" class="btn bg-white text-muted" id="togglePassword2"> 
                                     <span class="far fa-eye-slash"></span> 
                                 </button> 
                             </div>
@@ -73,4 +73,15 @@
     </div>
 </div>
 
+<script>
+    document.getElementById('togglePassword1').addEventListener('click', function() {
+        const input = document.querySelector('input[name="password"]');
+        input.type = input.type === 'password' ? 'text' : 'password';
+    });
+
+    document.getElementById('togglePassword2').addEventListener('click', function() {
+        const input = document.querySelector('input[name="password_confirmation"]');
+        input.type = input.type === 'password' ? 'text' : 'password';
+    });
+</script>
 </x-layouts.auth>
