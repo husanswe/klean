@@ -21,13 +21,13 @@
                 </button>
             </div>
 
-            <a href="{{ route('posts.create') }}" class="btn btn-primary mr-3 d-none d-lg-block">Create Post</a>
-            <form action="{{ route('logout') }}" method="post">
+            <a href="{{ route('posts.create') }}" class="btn btn-primary mr-3 my-2 my-lg-0">Create Post</a>
+            <form action="{{ route('logout') }}" method="post" class="my-2 my-lg-0">
                 @csrf
-                <button class="btn btn-danger mr-3 d-none d-lg-block">Logout</button>
+                <button class="btn btn-danger mr-3">Logout</button>
             </form>
         @else
-            <a href="{{ route('login') }}" class="btn btn-primary mr-3 d-none d-lg-block">Login</a>
+            <a href="{{ route('login') }}" class="btn btn-primary mr-3 my-2 my-lg-0">Login</a>
         @endauth
     </div>
 </nav>

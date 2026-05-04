@@ -41,7 +41,7 @@ a:hover {
 }
 
 .panel {
-    min-height: 380px;
+    min-height: auto;
     box-shadow: 20px 20px 80px rgb(218, 218, 218);
     border-radius: 12px
 }
@@ -95,6 +95,16 @@ a[target='_blank'] {
     left: 33%;
     background-color: #fff;
     padding: 0px 8px
+}
+
+@media(max-width: 576px) {
+    .panel {
+        min-height: auto;
+    }
+    .btn.btn-primary {
+        display: block;
+        width: 100%;
+    }
 }
 
 @media(max-width: 360px) {
