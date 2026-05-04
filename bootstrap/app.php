@@ -15,6 +15,10 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->redirectGuestsTo('/login');
     })
 
+    ->withMiddleware(function (Middleware $middleware) {
+        $middleware->trustProxies(at: '*', headers: \Illuminate\Http\Request::HEADER_X_FORWARDED_FOR);
+    })
+    
     ->withExceptions(function (Exceptions $exceptions): void {
         //
     })->create();
