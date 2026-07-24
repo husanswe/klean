@@ -66,6 +66,7 @@ class PostController extends Controller
         PostCreated::dispatch($post);
 
         $users = User::where('id', '!=', auth()->id())->get();
+        Notification::send($users, new NewPostPublished($post));
 
         return redirect()->route('posts.index');
     }

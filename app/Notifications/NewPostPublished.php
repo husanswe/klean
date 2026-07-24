@@ -8,7 +8,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use App\Models\Post;
 
-class PostCreated extends Notification
+class NewPostPublished extends Notification
 {
     use Queueable;
 
@@ -26,14 +26,6 @@ class PostCreated extends Notification
     {
         return ['database'];
     }
-
-    /* public function toMail(object $notifiable): MailMessage
-    {
-        return (new MailMessage)
-            ->line('The introduction to the notification.')
-            ->action('Notification Action', url('/'))
-            ->line('Thank you for using our application!');
-    } */
 
     /**
      * Get the array representation of the notification.
