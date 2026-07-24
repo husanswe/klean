@@ -14,7 +14,7 @@ class PostCreated extends Notification
 
     public function __construct(public Post $post)
     {
-        via()
+        
     }
 
     /**
@@ -24,16 +24,16 @@ class PostCreated extends Notification
      */
     public function via(object $notifiable): array
     {
-        return ['mail'];
+        return ['database'];
     }
 
-    public function toMail(object $notifiable): MailMessage
+    /* public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
             ->line('The introduction to the notification.')
             ->action('Notification Action', url('/'))
             ->line('Thank you for using our application!');
-    }
+    } */
 
     /**
      * Get the array representation of the notification.
@@ -43,7 +43,9 @@ class PostCreated extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            //
+            'post_id' => $this->post->id,
+            'post_title' => $this->post->title,
+            'author_name'=> $this->post->user->name
         ];
     }
 }
