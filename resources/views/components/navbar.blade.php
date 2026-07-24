@@ -16,8 +16,8 @@
         </div>
         @auth
             <div class="mr-2" style="max-width: 768px;">
-                <button class="border border-dark rounded text-dark p-2 text-wrap">
-                    User: {{ auth()->user()->name }}
+                <button class="rounded text-wrap">
+                    {{ auth()->user()->name }}
                 </button>
             </div>
 
