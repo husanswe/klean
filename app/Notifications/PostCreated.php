@@ -6,14 +6,15 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use App\Models\Post;
 
 class PostCreated extends Notification
 {
     use Queueable;
 
-    public function __construct()
+    public function __construct(public Post $post)
     {
-        //
+        via()
     }
 
     /**
