@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\Tag;
+use App\Models\User;
 use App\Http\Requests\StorePostRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -43,7 +44,6 @@ class PostController extends Controller
             $name = $request->file('photo')->getClientOriginalName();
             $path = $request->file('photo')->storeAs('post_photos', $name, 'public');
         }
-        
 
         $post = Post::create([
             'user_id' => Auth::id(),
@@ -62,6 +62,8 @@ class PostController extends Controller
         }
 
         PostCreated::dispatch($post);
+
+        $users = User::where('id', '!=', auth()->id())->get();
 
         return redirect()->route('posts.index');
     }
