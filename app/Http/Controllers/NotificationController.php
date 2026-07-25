@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class NotificationController extends Controller
 {
-    public function read(int $id)
+    public function read(string $id)
     {
         $notification = auth()->user()->notifications()->findOrFail($id);
         $notification->markAsRead();
@@ -16,7 +16,9 @@ class NotificationController extends Controller
 
     public function readAll()
     {
-        auth()->user()->unreadNotifications->markAllAsRead();
+        foreach (auth()->user()->unreadNotifications as $notification) {
+            $notification->markAsRead();
+        }
 
         return back();
     }
