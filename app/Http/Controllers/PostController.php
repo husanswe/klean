@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\NewPostPublished;
+use Illuminate\Support\Facades\Cache;
 
 class PostController extends Controller
 {
@@ -24,6 +25,10 @@ class PostController extends Controller
     public function index()
     {   
         $posts = Post::latest()->paginate(6);
+        $page = request('page', 1);
+        $posts = Cache::remember('posts.index.page.' . $page, 300, function() {
+            return Post::with('user')->latest()->paginate(6);
+        });
 
         return view('posts.index')->with('posts', $posts);
     }
