@@ -5,6 +5,7 @@
     use App\Http\Controllers\PostController;
     use App\Http\Controllers\CommentController;
     use App\Http\Controllers\UserController;
+    use App\Http\Controllers\NotificationController;
     use Illuminate\Support\Facades\Route;
 
     Route::get('main', [PageController::class, 'main'])->name('main');
@@ -29,4 +30,6 @@
 
     Route::resource('comments', CommentController::class)->middleware('auth');
 
+    Route::get('/notifications/{id}/read', [NotificationController::class, 'read'])->name('notifications.read');
+    Route::post('/notifications/read-all', [NotificationController::class, 'readAll'])->name('notifications.readAll');
 ?>
