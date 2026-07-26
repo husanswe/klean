@@ -32,4 +32,11 @@
 
     Route::get('/notifications/{id}/read', [NotificationController::class, 'read'])->name('notifications.read');
     Route::post('/notifications/read-all', [NotificationController::class, 'readAll'])->name('notifications.readAll');
+
+    Route::get('/lang/{locale}', function ($locale) {
+        if (in_array($locale, ['en', 'ru', 'uz'])) {
+            session(['locale' => $locale]);
+        }
+        return back();
+    })->name('lang.switch');
 ?>
