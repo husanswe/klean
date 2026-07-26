@@ -16,6 +16,6 @@ Schedule::call(function() {
     $userCount = User::count();
     $postCount = Post::count();
     $commentCount = Comment::count();
-    
-    Log::info("Counting how many new users, posts and comments created");
+
+    Log::info("Stats - Users: {$userCount}, Posts: {$postCount}, Comments: {$commentCount}");
 })->everyMinute();
