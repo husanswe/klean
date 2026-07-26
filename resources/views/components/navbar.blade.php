@@ -14,6 +14,32 @@
             <a href="{{ route('posts.index') }}" class="nav-item nav-link">Blog</a>
             <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
         </div>
+
+        <div class="nav-item dropdown mr-lg-3 my-2 my-lg-0">
+            <a href="#" class="nav-link dropdown-toggle d-flex align-items-center px-0 px-lg-2" data-toggle="dropdown" id="langDropdown" aria-haspopup="true" aria-expanded="false">
+                @php
+                    $flags = ['en' => 'united-states', 'ru' => 'russia', 'uz' => 'uzbekistan'];
+                    $labels = ['en' => 'English', 'ru' => 'Русский', 'uz' => "O'zbek"];
+                    $current = app()->getLocale();
+                @endphp
+                <img src="{{ asset('img/flags/united-states.png' . ($flags[$current] ?? 'uzbekistan') . '.png') }}"
+                    alt="{{ $current }}" width="22" height="22" class="mr-2" style="object-fit: cover; border-radius: 3px;">
+                <span>{{ $labels[$current] ?? 'English' }}</span>
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-lg-right shadow border-0 mt-2"
+                aria-labelledby="langDropdown" style="min-width: 180px;">
+                @foreach($labels as $code => $label)
+                    <a class="dropdown-item d-flex align-items-center py-2 {{ $current === $code ? 'active' : '' }}"
+                    href="{{ url('/lang/' . $code) }}">
+                        <img src="{{ asset('img/flags/' . $flags[$code] . '.png') }}"
+                            alt="{{ $code }}" width="20" height="20" class="mr-2" style="object-fit: cover; border-radius: 3px;">
+                        {{ $label }}
+                    </a>
+                @endforeach
+            </div>
+        </div>
+
         @auth
             <div class="nav-item dropdown mr-3 my-2 my-lg-0">
                 <a href="#" class="nav-link position-relative p-2" data-toggle="dropdown" id="notifBell" aria-haspopup="true" aria-expanded="false">
