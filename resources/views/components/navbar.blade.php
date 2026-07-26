@@ -7,12 +7,12 @@
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
         <div class="navbar-nav mr-auto py-0">
-            <a href="{{ route('main') }}" class="nav-item nav-link active">{{ __('Bosh sahifa') }}</a>
-            <a href="{{ route('about') }}" class="nav-item nav-link">{{ __('Biz haqimizda')}}</a>
-            <a href="{{ route('service') }}" class="nav-item nav-link">{{ __('Xizmatlar')}}</a>
-            <a href="{{ route('project') }}" class="nav-item nav-link">{{ __('Portfolio')}}</a>
-            <a href="{{ route('posts.index') }}" class="nav-item nav-link">{{ __('Blog')}}</a>
-            <a href="{{ route('contact') }}" class="nav-item nav-link">{{ __('Biz bilan bog\'laning')}}</a>
+            <a href="{{ route('main') }}" class="nav-item nav-link active">{{ __('main') }}</a>
+            <a href="{{ route('about') }}" class="nav-item nav-link">{{ __('about_us')}}</a>
+            <a href="{{ route('service') }}" class="nav-item nav-link">{{ __('services')}}</a>
+            <a href="{{ route('project') }}" class="nav-item nav-link">{{ __('project')}}</a>
+            <a href="{{ route('posts.index') }}" class="nav-item nav-link">{{ __('blog')}}</a>
+            <a href="{{ route('contact') }}" class="nav-item nav-link">{{ __('contact_us')}}</a>
         </div>
 
         <div class="nav-item dropdown mr-lg-3 my-2 my-lg-0">

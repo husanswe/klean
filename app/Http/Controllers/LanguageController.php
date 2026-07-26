@@ -10,9 +10,12 @@ class LanguageController extends Controller
 {
     public function change_locale($locale)
     {
-        App::setLocale($locale);
+        if (! in_array($locale, ['en', 'ru', 'uz'])) {
+            abort(400);
+        }
+
         Session::put('locale', $locale);
         
-        return redirect()->bcak();
+        return redirect()->back();
     }
 }

@@ -1,8 +1,8 @@
 {
-    "Bosh sahifa": "Главная страница",
-    "Biz haqimizda": "О нас",
-    "Xizmatlar": "Нашы услуги",
-    "Portfolio": "Портфолио",
-    "Blog": "Блог",
-    "Biz bilan bog'laning": "Связаться с нами"
+    "main": "Главная страница",
+    "about_us": "О нас",
+    "services": "Нашы услуги",
+    "project": "Портфолио",
+    "blog": "Блог",
+    "contact_us": "Связаться с нами"
 }

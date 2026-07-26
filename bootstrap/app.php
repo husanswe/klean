@@ -13,16 +13,12 @@ return Application::configure(basePath: dirname(__DIR__))
 
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->redirectGuestsTo('/login');
-    })
 
-    ->withMiddleware(function (Middleware $middleware) {
+        $middleware->trustProxies(at: '*', headers: \Illuminate\Http\Request::HEADER_X_FORWARDED_FOR);
+
         $middleware->web(append: [
             \App\Http\Middleware\LanguageMiddleware::class,
         ]);
-    })
-    
-    ->withMiddleware(function (Middleware $middleware) {
-        $middleware->trustProxies(at: '*', headers: \Illuminate\Http\Request::HEADER_X_FORWARDED_FOR);
     })
 
     ->withExceptions(function (Exceptions $exceptions): void {

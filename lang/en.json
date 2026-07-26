@@ -1,8 +1,8 @@
 {
-    "Bosh sahifa": "Main",
-    "Biz haqimizda": "About Us",
-    "Xizmatlar": "Services",
-    "Portfolio": "Project",
-    "Blog": "Blog",
-    "Biz bilan bog'laning": "Contact"
+    "main": "Main",
+    "about_us": "About Us",
+    "services": "Services",
+    "project": "Project",
+    "blog": "Blog",
+    "contact_us": "Contact"
 }
