@@ -22,7 +22,7 @@
                     $labels = ['en' => 'English', 'ru' => 'Русский', 'uz' => "O'zbek"];
                     $current = app()->getLocale();
                 @endphp
-                <img src="{{ asset('img/flags/united-states.png' . ($flags[$current] ?? 'uzbekistan') . '.png') }}"
+                <img src="{{ asset('img/flags/' . ($flags[$current] ?? 'uzbekistan') . '.png') }}"
                     alt="{{ $current }}" width="22" height="22" class="mr-2" style="object-fit: cover; border-radius: 3px;">
                 <span>{{ $labels[$current] ?? 'English' }}</span>
             </a>
