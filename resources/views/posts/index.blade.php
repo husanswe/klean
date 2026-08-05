@@ -10,6 +10,13 @@
     <!-- Blog Start -->
     <div class="container-fluid py-5">
         <div class="container">
+
+            @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                </div>
+            @endif
+            
             <div class="row align-items-end mb-4">
                 <div class="col-lg-6">
                     <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Latest Blog</h6>

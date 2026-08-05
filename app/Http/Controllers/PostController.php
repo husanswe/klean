@@ -26,6 +26,7 @@ class PostController extends Controller
     {   
         $posts = Post::latest()->paginate(6);
         $page = request('page', 1);
+
         $posts = Cache::remember('posts.index.page.' . $page, 300, function() {
             return Post::with('user')->latest()->paginate(6);
         });
@@ -61,6 +62,8 @@ class PostController extends Controller
             'photo' => $path ?? null,
         ]);
 
+        Cache::forget('posts.index.page.1');
+
         if(isset($request->tags))
         {
             foreach ($request->tags as $tag){
@@ -73,7 +76,9 @@ class PostController extends Controller
         $users = User::where('id', '!=', auth()->id())->get();
         Notification::send($users, new NewPostPublished($post));
 
-        return redirect()->route('posts.index');
+        $request->session()->flash('status', 'Post created successfully!');
+
+        return redirect()->route('posts.index')->with('status', 'Post created successfully!');
     }
 
     
@@ -116,6 +121,8 @@ class PostController extends Controller
             'photo' => $path ?? $post->photo,
         ]);
 
+        Cache::forget('posts.index.page.1');
+
         return redirect()->route('posts.show', ['post' => $post->id]);
     }
 
@@ -130,6 +137,8 @@ class PostController extends Controller
 
         $post->delete();
 
+        Cache::forget('posts.index.page.1');
+        
         return redirect()->route('posts.index');
     }
 }
