@@ -17,6 +17,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\NewPostPublished;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 
 class PostController extends Controller
 {
@@ -24,6 +25,19 @@ class PostController extends Controller
     
     public function index()
     {   
+        $message = 'This is testing logs';
+        $id = auth()->id();
+        
+        Log::emergency($message);
+        Log::alert($message);
+        Log::critical($message);
+        Log::error($message);
+        Log::warning($message);
+        Log::notice($message);
+        Log::info($message);
+        Log::debug($message);
+        Log::info("Showing the user profile for user: ". $id);
+
         $posts = Post::latest()->paginate(6);
         $page = request('page', 1);
 
