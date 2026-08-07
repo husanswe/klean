@@ -40,8 +40,4 @@
         }
         return back();
     })->name('lang.switch');
-
-    /* Route::get('/test-quote', function () {
-        return Http::timeout(5)->get('https://zenquotes.io/api/random')->json();
-    }); */
 ?>
