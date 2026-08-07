@@ -27,8 +27,8 @@ class PostController extends Controller
     {   
         $message = 'This is testing logs';
         $id = auth()->id();
-        
-        Log::emergency($message);
+
+        Log::emergency('The system is down!');
         Log::alert($message);
         Log::critical($message);
         Log::error($message);
