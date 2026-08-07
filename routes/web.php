@@ -7,6 +7,7 @@
     use App\Http\Controllers\UserController;
     use App\Http\Controllers\NotificationController;
     use Illuminate\Support\Facades\Route;
+    use Illuminate\Support\Facades\Http;
 
     Route::get('main', [PageController::class, 'main'])->name('main');
     Route::get('about', [PageController::class, 'about'])->name('about');
@@ -39,4 +40,8 @@
         }
         return back();
     })->name('lang.switch');
+
+    /* Route::get('/test-quote', function () {
+        return Http::timeout(5)->get('https://zenquotes.io/api/random')->json();
+    }); */
 ?>

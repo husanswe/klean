@@ -79,6 +79,13 @@
                 </div>
             </div>
         </div>
+        @if ($quote)
+            <blockquote class="blockquote mt-5">
+                <h2 class="text-danger">Quote of the day:</h2>
+                <h2>{{ $quote[0]['q'] }}</h2>
+                <p>- {{ $quote[0]['a'] }}</p>
+            </blockquote>
+        @endif
     </div>
     <!-- Contact Info End -->
 
