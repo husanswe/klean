@@ -19,11 +19,11 @@
             
             <div class="row align-items-end mb-4">
                 <div class="col-lg-6">
-                    <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Latest Blog</h6>
+                    <h6 class="text-secondary fw-semi-bold text-uppercase mb-3">Latest Blog</h6>
                     <h1 class="section-title mb-3">Latest Articles From Our Blog</h1>
                 </div>
                 <div class="col-lg-6">
-                    <h4 class="font-weight-normal text-muted mb-3">Eirmod kasd duo eos et magna, diam dolore stet sea clita sit ea erat lorem. Ipsum eos ipsum magna lorem stet</h4>
+                    <h4 class="fw-normal text-muted mb-3">Eirmod kasd duo eos et magna, diam dolore stet sea clita sit ea erat lorem. Ipsum eos ipsum magna lorem stet</h4>
                 </div>
             </div>
 
@@ -34,14 +34,14 @@
                         <div class="position-relative mb-4">
                             <img class="img-fluid rounded w-100" src="{{ asset('storage/'.$post->photo) }}" alt="Image">
                             <div class="blog-date">
-                                <h4 class="font-weight-bold mb-n1">01</h4>
+                                <h4 class="fw-bold mb-n1">01</h4>
                                 <small class="text-white text-uppercase">Jan</small>
                             </div>
                         </div>
 
                         <div class="d-flex mb-2">
                             @foreach ($post->tags as $tag)
-                                <a class="text-secondary text-uppercase font-weight-medium">{{ $tag->name }}</a>
+                                <a class="text-secondary text-uppercase fw-medium">{{ $tag->name }}</a>
                                 <span class="text-primary px-2">|</span>
                             @endforeach
                         </div>
@@ -50,7 +50,7 @@
                             <a class="bg-secondary rounded text-center text-white px-2 py-1">{{ $post->category->name }}</a>
                         </div>
 
-                        <h5 class="font-weight-medium mb-2">{{ $post->title }}</h5>
+                        <h5 class="fw-medium mb-2">{{ $post->title }}</h5>
                         <p class="mb-4">{{ $post->short_content }}</p>
                         <a class="btn btn-sm btn-primary py-2" href="{{ route('posts.show', ['post' =>$post->id]) }}">Read More</a>
                     </div>
@@ -64,7 +64,7 @@
                         <li class="page-item disabled">
                         <a class="page-link" href="#" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
+                            <span class="visually-hidden">Previous</span>
                         </a>
                         </li>
                         <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -73,7 +73,7 @@
                         <li class="page-item">
                         <a class="page-link" href="#" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
+                            <span class="visually-hidden">Next</span>
                         </a>
                         </li>
                     </ul>

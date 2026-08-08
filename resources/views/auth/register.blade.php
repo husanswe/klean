@@ -6,9 +6,9 @@
             <div class="panel border bg-white">
                 
                 <div class="panel-heading">
-                    <h3 class="pt-3 font-weight-bold">Sign up</h3>
+                    <h3 class="pt-3 fw-bold">Sign up</h3>
                 </div>
-                
+
                 <div class="panel-body p-3">
                     <form action="{{ route('register.user') }}" method="post">
                         @csrf
@@ -21,37 +21,37 @@
                                 </ul>
                             </div>
                         @endif
-                        <div class="form-group py-2">
-                            <div class="input-field"> <span class="far fa-user p-2"></span> 
-                                <input name="name" type="text" placeholder="Your Name" required> 
+                        <div class="mb-3 py-2">
+                            <div class="input-field"> <span class="far fa-user p-2"></span>
+                                <input name="name" type="text" placeholder="Your Name" required>
                             </div>
                         </div>
 
-                        <div class="form-group py-2">
-                            <div class="input-field"> <span class="far fa-envelope p-2"></span> 
-                                <input name="email" type="text" placeholder="Email" required> 
+                        <div class="mb-3 py-2">
+                            <div class="input-field"> <span class="far fa-envelope p-2"></span>
+                                <input name="email" type="text" placeholder="Email" required>
                             </div>
                         </div>
 
-                        <div class="form-group py-1 pb-2">
-                            <div class="input-field"> <span class="fas fa-lock px-2"></span> 
-                                <input name="password" type="password" placeholder="Password" required> 
-                                <button type="button" class="btn bg-white text-muted" id="togglePassword1"> 
-                                    <span class="far fa-eye-slash"></span> 
-                                </button> 
+                        <div class="mb-3 py-1 pb-2">
+                            <div class="input-field"> <span class="fas fa-lock px-2"></span>
+                                <input name="password" type="password" placeholder="Password" required>
+                                <button type="button" class="btn bg-white text-muted" id="togglePassword1">
+                                    <span class="far fa-eye-slash"></span>
+                                </button>
                             </div>
                         </div>
 
-                        <div class="form-group py-1 pb-2">
-                            <div class="input-field"> <span class="fas fa-lock px-2"></span> 
-                                <input name="password_confirmation" type="password" placeholder="Confirm your password" required> 
-                                <button type="button" class="btn bg-white text-muted" id="togglePassword2"> 
-                                    <span class="far fa-eye-slash"></span> 
-                                </button> 
+                        <div class="mb-3 py-1 pb-2">
+                            <div class="input-field"> <span class="fas fa-lock px-2"></span>
+                                <input name="password_confirmation" type="password" placeholder="Confirm your password" required>
+                                <button type="button" class="btn bg-white text-muted" id="togglePassword2">
+                                    <span class="far fa-eye-slash"></span>
+                                </button>
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-block mt-3">
+                        <button type="submit" class="btn btn-primary w-100 mt-3">
                             Sign up
                         </button>
 

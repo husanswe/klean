@@ -27,6 +27,6 @@ class AppServiceProvider extends ServiceProvider
         Event::listen (PostCreated::class, SendEmailToUser::class);
         Event::listen(PostCreated::class, SendNotificationToAdmin::class);
 
-        Paginator::useBootstrapFour();
+        Paginator::useBootstrapFive();
     }
 }

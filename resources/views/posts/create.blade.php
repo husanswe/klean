@@ -93,7 +93,7 @@
                         </div>
 
                         <div>
-                            <button class="btn btn-primary btn-block py-3 px-5" type="submit">
+                            <button class="btn btn-primary w-100 py-3 px-5" type="submit">
                                 Save
                             </button>
                         </div>

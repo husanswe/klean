@@ -20,17 +20,17 @@
                     </div>
                 </div>
                 <div class="col-lg-7 pt-5 pb-lg-5">
-                    <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Learn About Us</h6>
+                    <h6 class="text-secondary fw-semi-bold text-uppercase mb-3">Learn About Us</h6>
                     <h1 class="mb-4 section-title">We Provide The Best Cleaning Services</h1>
-                    <h5 class="text-muted font-weight-normal mb-3">Eos kasd eos dolor vero vero, lorem stet diam rebum. Ipsum amet sed vero dolor sea lorem justo est dolor eos</h5>
+                    <h5 class="text-muted fw-normal mb-3">Eos kasd eos dolor vero vero, lorem stet diam rebum. Ipsum amet sed vero dolor sea lorem justo est dolor eos</h5>
                     <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor</p>
                     <div class="d-flex align-items-center pt-4">
-                        <a href="" class="btn btn-primary mr-5">Learn More</a>
-                        <button type="button" class="btn-play" data-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                        <a href="" class="btn btn-primary me-5">Learn More</a>
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
                         </button>
-                        <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
+                        <h5 class="fw-normal text-white m-0 ms-4 d-none d-sm-block">Play Video</h5>
                     </div>
                 </div>
             </div>
@@ -44,12 +44,10 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>        
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
@@ -63,21 +61,21 @@
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-7 pt-lg-5 pb-3">
-                    <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Why Choose Us</h6>
+                    <h6 class="text-secondary fw-semi-bold text-uppercase mb-3">Why Choose Us</h6>
                     <h1 class="mb-4 section-title">25 Years Experience In Cleaning Industry</h1>
                     <p class="mb-4">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
                     <div class="row">
                         <div class="col-sm-4">
                             <h1 class="text-secondary mb-2" data-toggle="counter-up">225</h1>
-                            <h6 class="font-weight-semi-bold mb-sm-4">Our Cleaners</h6>
+                            <h6 class="fw-semi-bold mb-sm-4">Our Cleaners</h6>
                         </div>
                         <div class="col-sm-4">
                             <h1 class="text-secondary mb-2" data-toggle="counter-up">1050</h1>
-                            <h6 class="font-weight-semi-bold mb-sm-4">Happy Clients</h6>
+                            <h6 class="fw-semi-bold mb-sm-4">Happy Clients</h6>
                         </div>
                         <div class="col-sm-4">
                             <h1 class="text-secondary mb-2" data-toggle="counter-up">2500</h1>
-                            <h6 class="font-weight-semi-bold mb-sm-4">Projects Done</h6>
+                            <h6 class="fw-semi-bold mb-sm-4">Projects Done</h6>
                         </div>
                     </div>
                 </div>
@@ -97,11 +95,11 @@
         <div class="container py-5">
             <div class="row align-items-end mb-4">
                 <div class="col-lg-6">
-                    <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Meet Our Team</h6>
+                    <h6 class="text-secondary fw-semi-bold text-uppercase mb-3">Meet Our Team</h6>
                     <h1 class="section-title mb-3">Meet Our Highly Experienced Cleaners</h1>
                 </div>
                 <div class="col-lg-6">
-                    <h4 class="font-weight-normal text-muted mb-3">Eirmod kasd duo eos et magna, diam dolore stet sea clita sit ea erat lorem. Ipsum eos ipsum magna lorem stet</h4>
+                    <h4 class="fw-normal text-muted mb-3">Eirmod kasd duo eos et magna, diam dolore stet sea clita sit ea erat lorem. Ipsum eos ipsum magna lorem stet</h4>
                 </div>
             </div>
             <div class="row">
@@ -119,7 +117,7 @@
                                 </div>
                             </div>
                             <div class="d-flex flex-column bg-primary text-center py-4">
-                                <h5 class="font-weight-bold">Full Name</h5>
+                                <h5 class="fw-bold">Full Name</h5>
                                 <p class="text-white m-0">Designation</p>
                             </div>
                         </div>
@@ -135,7 +133,7 @@
                                 </div>
                             </div>
                             <div class="d-flex flex-column bg-primary text-center py-4">
-                                <h5 class="font-weight-bold">Full Name</h5>
+                                <h5 class="fw-bold">Full Name</h5>
                                 <p class="text-white m-0">Designation</p>
                             </div>
                         </div>
@@ -151,7 +149,7 @@
                                 </div>
                             </div>
                             <div class="d-flex flex-column bg-primary text-center py-4">
-                                <h5 class="font-weight-bold">Full Name</h5>
+                                <h5 class="fw-bold">Full Name</h5>
                                 <p class="text-white m-0">Designation</p>
                             </div>
                         </div>
@@ -167,7 +165,7 @@
                                 </div>
                             </div>
                             <div class="d-flex flex-column bg-primary text-center py-4">
-                                <h5 class="font-weight-bold">Full Name</h5>
+                                <h5 class="fw-bold">Full Name</h5>
                                 <p class="text-white m-0">Designation</p>
                             </div>
                         </div>

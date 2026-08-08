@@ -16,8 +16,8 @@
                 <div class="col-lg-8">
                     @auth
                         @canany(['update', 'delete'], $post)
-                        <div class="d-flex justify-content-end mb-4">  
-                            <a class="btn btn-sm btn-warning mr-3" href="{{ route('posts.edit', ['post' => $post->id]) }}">
+                        <div class="d-flex justify-content-end mb-4">
+                            <a class="btn btn-sm btn-warning me-3" href="{{ route('posts.edit', ['post' => $post->id]) }}">
                                 Edit
                             </a>
 
@@ -36,10 +36,10 @@
                     <div class="mb-5">
                         <div class="d-flex mb-2">
                             @foreach ($post->tags as $tag)
-                                <a class="text-secondary text-uppercase font-weight-medium">{{ $tag->name }}</a>
+                                <a class="text-secondary text-uppercase fw-medium">{{ $tag->name }}</a>
                                 <span class="text-primary px-2">|</span>
                             @endforeach
-                            <a class="text-secondary text-uppercase font-weight-medium">{{$post->created_at}}</a>
+                            <a class="text-secondary text-uppercase fw-medium">{{$post->created_at}}</a>
                         </div>
 
                         <div class="d-flex mb-2">
@@ -59,9 +59,9 @@
                         
                         @foreach ($post->comments as $comment)
 
-                            <div class="media mb-4">
-                                <img src="/img/user.jpg" alt="Image" class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
-                                <div class="media-body">
+                            <div class="d-flex mb-4">
+                                <img src="/img/user.jpg" alt="Image" class="img-fluid rounded-circle me-3 mt-1" style="width: 45px;">
+                                <div>
                                     <h6>{{ $comment->user->name }} <small><i>{{ $comment->created_at }}</i></small></h6>
                                     <p>{{ $comment->body }}</p>
                                     @auth
@@ -101,19 +101,19 @@
                         @auth  
                             <form action="{{ route('comments.store') }}" method="post">
                                 @csrf
-                                <div class="form-group">
+                                <div class="mb-3">
                                     <label for="message">Message</label>
                                     <textarea name="body" cols="30" rows="5" class="form-control"></textarea>
                                 </div>
                                 <input type="hidden" name="post_id" value="{{ $post->id }}">
-                                <div class="form-group mb-0">
+                                <div class="mb-0">
                                     <input type="submit" value="Submit" class="btn btn-primary">
                                 </div>
                             </form>
                         @else
                             <div>
                                 Login to leave a comment
-                                <a href="{{ route('login') }}" class="btn btn-primary ml-3">Login</a>
+                                <a href="{{ route('login') }}" class="btn btn-primary ms-3">Login</a>
                             </div>
                         @endauth
                     </div>
@@ -131,9 +131,7 @@
                         <div class="w-100">
                             <div class="input-group">
                                 <input type="text" class="form-control" style="padding: 25px;" placeholder="Keyword">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary px-4">Search</button>
-                                </div>
+                                <button class="btn btn-primary px-4">Search</button>
                             </div>
                         </div>
                     </div>
@@ -142,8 +140,8 @@
                         <ul class="list-inline m-0">
                             @foreach ($categories as $category)
                                 <li class="mb-1 py-2 px-3 bg-light d-flex justify-content-between align-items-center">
-                                    <a class="text-dark" href="#"><i class="fa fa-angle-right text-secondary mr-2"></i>{{ $category->name }}</a>
-                                    <span class="badge badge-primary badge-pill">{{ $category->posts()->count() }}</span>
+                                    <a class="text-dark" href="#"><i class="fa fa-angle-right text-secondary me-2"></i>{{ $category->name }}</a>
+                                    <span class="badge bg-primary rounded-pill">{{ $category->posts()->count() }}</span>
                                 </li>
                             @endforeach
                         </ul>
@@ -167,12 +165,12 @@
                         @foreach ($recent_posts as $post)
                             <div class="d-flex align-items-center border-bottom mb-3 pb-3">
                                 <img class="img-fluid rounded" src="{{ asset('storage/'.$post->photo) }}" style="width: 80px; height: 80px; object-fit: cover;" alt="">
-                                <div class="d-flex flex-column pl-3">
+                                <div class="d-flex flex-column ps-3">
                                     <a class="text-dark mb-2" href="">{{ $post->title}}</a>
                                     <div class="d-flex">
-                                        <small><a class="text-secondary text-uppercase font-weight-medium" href="">Admin</a></small>
+                                        <small><a class="text-secondary text-uppercase fw-medium" href="">Admin</a></small>
                                         <small class="text-primary px-2">|</small>
-                                        <small><a class="text-secondary text-uppercase font-weight-medium" href="">Cleaning</a></small>
+                                        <small><a class="text-secondary text-uppercase fw-medium" href="">Cleaning</a></small>
                                     </div>
                                 </div>
                             </div>
