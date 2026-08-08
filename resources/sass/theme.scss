@@ -1,0 +1,11 @@
+// Klean theme overrides for Bootstrap 5.
+// Mirrors the color/font variables the old compiled Bootstrap 4
+// build in public/css/style.css used to hard-code.
+$primary: #FFC600;
+$secondary: #23A036;
+$light: #F5F5F5;
+$dark: #0a1026;
+
+$font-family-sans-serif: "Poppins", sans-serif;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";

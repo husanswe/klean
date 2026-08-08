@@ -38,7 +38,10 @@ class PostController extends Controller
         Log::debug($message);
         Log::info("Showing the user profile for user: ". $id);
 
-        $posts = Post::latest()->paginate(6);
+        $posts = Post::with('category')->latest()->paginate(6);
+        $grouped = $posts->groupBy('category.name');
+        dd($grouped);
+
         $page = request('page', 1);
 
         $posts = Cache::remember('posts.index.page.' . $page, 300, function() {
