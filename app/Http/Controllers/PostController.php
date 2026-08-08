@@ -25,7 +25,7 @@ class PostController extends Controller
     
     public function index()
     {   
-        $message = 'This is testing logs';
+        /* $message = 'This is testing logs';
         $id = auth()->id();
 
         Log::emergency('The system is down!');
@@ -36,11 +36,10 @@ class PostController extends Controller
         Log::notice($message);
         Log::info($message);
         Log::debug($message);
-        Log::info("Showing the user profile for user: ". $id);
+        Log::info("Showing the user profile for user: ". $id); */
 
         $posts = Post::with('category')->latest()->paginate(6);
         $grouped = $posts->groupBy('category.name');
-        dd($grouped);
 
         $page = request('page', 1);
 
@@ -48,7 +47,7 @@ class PostController extends Controller
             return Post::with('user')->latest()->paginate(6);
         });
 
-        return view('posts.index')->with('posts', $posts);
+        return view('posts.index')->with(['posts' => $posts, 'grouped' => $grouped]);
     }
 
     
