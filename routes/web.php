@@ -40,4 +40,5 @@
         }
         return back();
     })->name('lang.switch');
+   
 ?>
