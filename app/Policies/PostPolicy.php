@@ -29,7 +29,10 @@ class PostPolicy
      */
     public function create(User $user): bool
     {
-        return true;
+        if ($user->isAuthor() || $user->isAdmin()) {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -37,7 +40,7 @@ class PostPolicy
      */
     public function update(User $user, Post $post): bool
     {
-        return $user->id === $post->user_id;
+        return $user->id === $post->user_id || $user->isAdmin();
     }
 
     /**
@@ -45,7 +48,7 @@ class PostPolicy
      */
     public function delete(User $user, Post $post): bool
     {
-        return $user->id === $post->user_id;
+        return $user->id === $post->user_id || $user->isAdmin();
     }
 
     /**
