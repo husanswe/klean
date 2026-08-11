@@ -5,6 +5,7 @@
     use App\Http\Controllers\PostController;
     use App\Http\Controllers\CommentController;
     use App\Http\Controllers\UserController;
+    use App\Http\Controllers\Admin\UserRolesController;
     use App\Http\Controllers\NotificationController;
     use Illuminate\Support\Facades\Route;
     use Illuminate\Support\Facades\Http;
