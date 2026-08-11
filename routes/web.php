@@ -46,5 +46,9 @@
         Route::get('/users', [UserController::class, 'index'])->name('users');
         Route::post('/users/{user}/roles', [UserController::class, 'updateRoles'])->name('users.updateRoles');
     });
+
+    Route::middleware(['auth', 'role:admin'])->group(function () {
+        // admin-only routes
+    });
    
 ?>

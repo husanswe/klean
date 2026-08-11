@@ -91,8 +91,6 @@
                 @csrf
                 <button class="btn btn-danger">Logout</button>
             </form>
-        @else
-            <a href="{{ route('login') }}" class="btn btn-primary my-2 my-xl-0">Login</a>
 
             @if(auth()->user()->isAuthor() || auth()->user()->isAdmin())
                 <a href="{{ route('posts.create') }}" class="btn btn-primary">Create Post</a>
@@ -101,6 +99,8 @@
             @if(auth()->user()->isAdmin())
                 <a href="{{ route('admin.users') }}" class="btn btn-warning">Manage Users</a>
             @endif
+        @else
+            <a href="{{ route('login') }}" class="btn btn-primary my-2 my-xl-0">Login</a>
         @endauth
     </div>
 </nav>

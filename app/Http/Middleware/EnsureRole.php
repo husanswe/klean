@@ -13,8 +13,11 @@ class Ensurable
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next, string $role): Response
     {
+        if (!$request->user()->hasRole($role)) {
+            return abort(403);
+        }
         return $next($request);
     }
 }

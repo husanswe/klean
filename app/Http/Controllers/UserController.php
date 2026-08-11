@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -12,8 +14,25 @@ class UserController extends Controller
      */
     public function index()
     {
-        User::with('roles')->paginate(10);
-        return view('users.index');
+        if (!Auth::user()->isAdmin()) {
+            abort(403);
+        }
+
+        return view('users.index')->with([
+            'users' => User::with('roles')->paginate(20),
+            'roles' => Role::all(),
+        ]);
+    }
+
+    public function updateRoles(Request $request, User $user)
+    {
+        if (!Auth::user()->isAdmin()) {
+            abort(403);
+        }
+
+        $user->roles()->sync($request->input('roles', []));
+
+        return redirect()->route('admin.users')->with('status', 'Roles updated successfully!');
     }
 
     /**

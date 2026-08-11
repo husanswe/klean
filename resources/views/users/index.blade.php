@@ -28,12 +28,16 @@
                             <form method="POST" action="{{ route('admin.users.updateRoles', $user) }}">
                                 @csrf
                                 @foreach ($roles as $role)
-                                <input type="checkbox" value="{{ $role->id }}" name="roles[]" 
-                                    id="role-{{ $user->id }}-{{ $role->id }}" 
-                                    class="form-check-input"
-                                    {{ $user->roles->contains($role->id) ? 'checked' : '' }}>
+                                <input type="checkbox" 
+                                       value="{{ $role->id }}" name="roles[]" 
+                                       id="role-{{ $user->id }}-{{ $role->id }}" 
+                                       class="form-check-input"
+                                       {{ $user->roles->contains($role->id) ? 'checked' : '' }}>
+                                       
+                                       <label for="role-{{ $user->id }}-{{ $role->id }}" class="form-check-label">
+                                           {{ $role->name }}
+                                       </label>
                                 @endforeach
-                                <label for="role">{{ $role->name }}</label>
                                 <button type="submit" class="btn btn-primary btn-sm mt-2">Save</button>
                             </form>
                         </td>
