@@ -68,4 +68,24 @@ class User extends Authenticatable
     {
         return $this->hasMany(Comment::class);
     }
+
+    public function hasRole(string $roleName): bool
+    {
+        return $this->roles->contains('name', $roleName);
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->hasRole('admin');
+    }
+
+    public function isAuthor(): bool
+    {
+        return $this->hasRole('author');
+    }
+
+    public function isReader(): bool
+    {
+        return $this->hasRole('reader');
+    }
 }

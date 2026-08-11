@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+<nav @class(['navbar', 'navbar-expand-xl', 'bg-white', 'navbar-light', 'px-0', 'py-3', 'py-xl-0', 'navbar-signed-in' => auth()->check()])>
     <a href="" class="navbar-brand d-block d-lg-none">
         <h1 class="m-0 display-4 text-primary">Klean</h1>
     </a>
@@ -15,8 +15,8 @@
             <a href="{{ route('contact') }}" class="nav-item nav-link">{{ __('contact_us')}}</a>
         </div>
 
-        <div class="nav-item dropdown me-lg-3 my-2 my-lg-0">
-            <a href="#" class="nav-link dropdown-toggle d-flex align-items-center px-0 px-lg-2" data-bs-toggle="dropdown" id="langDropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="nav-item dropdown me-xl-2 my-2 my-xl-0">
+            <a href="#" class="nav-link dropdown-toggle d-flex align-items-center px-0 px-xl-2" data-bs-toggle="dropdown" id="langDropdown" aria-haspopup="true" aria-expanded="false">
                 @php
                     $flags = ['en' => 'united-states', 'ru' => 'russia', 'uz' => 'uzbekistan'];
                     $labels = ['en' => 'English', 'ru' => 'Русский', 'uz' => "O'zbek"];
@@ -24,10 +24,10 @@
                 @endphp
                 <img src="{{ asset('img/flags/' . ($flags[$current] ?? 'uzbekistan') . '.png') }}"
                     alt="{{ $current }}" width="22" height="22" class="me-2" style="object-fit: cover; border-radius: 3px;">
-                <span>{{ $labels[$current] ?? 'English' }}</span>
+                <span class="navbar-lang-label">{{ $labels[$current] ?? 'English' }}</span>
             </a>
 
-            <div class="dropdown-menu dropdown-menu-lg-end shadow border-0 mt-2"
+            <div class="dropdown-menu dropdown-menu-xl-end shadow border-0 mt-2"
                 aria-labelledby="langDropdown" style="min-width: 180px;">
                 @foreach($labels as $code => $label)
                     <a class="dropdown-item d-flex align-items-center py-2 {{ $current === $code ? 'active' : '' }}"
@@ -41,7 +41,7 @@
         </div>
 
         @auth
-            <div class="nav-item dropdown me-3 my-2 my-lg-0">
+            <div class="nav-item dropdown me-xl-2 my-2 my-xl-0">
                 <a href="#" class="nav-link position-relative p-2" data-bs-toggle="dropdown" id="notifBell" aria-haspopup="true" aria-expanded="false">
                     <i class="fa fa-bell text-primary" style="font-size: 20px;"></i>
                     @if(auth()->user()->unreadNotifications->count() > 0)
@@ -51,7 +51,7 @@
                     @endif
                 </a>
 
-                <div class="dropdown-menu dropdown-menu-end shadow border-0 mt-2" aria-labelledby="notifBell"
+                <div class="dropdown-menu dropdown-menu-xl-end shadow border-0 mt-2" aria-labelledby="notifBell"
                     style="min-width: 300px; max-width: 90vw; max-height: 400px; overflow-y: auto;">
 
                     <h6 class="dropdown-header d-flex justify-content-between align-items-center">
@@ -80,19 +80,19 @@
                 </div>
             </div>
 
-            <div class="me-2" style="max-width: 768px;">
-                <button class="rounded text-wrap">
+            <div class="navbar-user me-xl-2 my-2 my-xl-0">
+                <button type="button" class="rounded navbar-username" title="{{ auth()->user()->name }}">
                     {{ auth()->user()->name }}
                 </button>
             </div>
 
-            <a href="{{ route('posts.create') }}" class="btn btn-primary me-3 my-2 my-lg-0">Create Post</a>
-            <form action="{{ route('logout') }}" method="post" class="my-2 my-lg-0">
+            <a href="{{ route('posts.create') }}" class="btn btn-primary me-xl-2 my-2 my-xl-0">Create Post</a>
+            <form action="{{ route('logout') }}" method="post" class="my-2 my-xl-0">
                 @csrf
-                <button class="btn btn-danger me-3">Logout</button>
+                <button class="btn btn-danger">Logout</button>
             </form>
         @else
-            <a href="{{ route('login') }}" class="btn btn-primary me-3 my-2 my-lg-0">Login</a>
+            <a href="{{ route('login') }}" class="btn btn-primary my-2 my-xl-0">Login</a>
         @endauth
     </div>
 </nav>
