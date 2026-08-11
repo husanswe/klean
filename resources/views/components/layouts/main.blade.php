@@ -122,7 +122,7 @@
                     <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum.</p>
                     <div class="w-100">
                         <div class="input-group">
-                            <input type="text" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
+                            <input type="text" class="form-control border-0" style="padding: 10px;" placeholder="Your Email">
                             <button class="btn btn-primary px-4">Sign Up</button>
                         </div>
                     </div>
