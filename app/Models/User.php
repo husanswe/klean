@@ -46,13 +46,13 @@ class User extends Authenticatable
        'password' => 'hashed'
     ];
     
-    protected function name(): Attribute
+    /* protected function name(): Attribute
     {
         return Attribute::make(
             get: fn($value) => ucfirst($value),
             set: fn($value) => strtolower($value)
         );
-    }
+    } */
 
     public function roles()
     {

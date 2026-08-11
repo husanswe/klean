@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -52,6 +53,9 @@ class AuthController extends Controller
         $user = User::create($validated);
 
         Auth::login($user);
+
+        $readerRole = Role::where('name', 'reader')->first();
+        $user->roles()->attach($readerRole);
 
         return redirect('main')->with('success', "Account successfully registered.");
     }
